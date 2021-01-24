@@ -36,10 +36,13 @@ module.exports = {
    */
   themeConfig: {
     repo: 'fergv/my-blog',
-    editLinks: false,
-    docsDir: '',
+    editLinks: true,
+    docsDir: 'src',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
+    nav: [
+      { text: 'fergv.com', link: 'https://fergv.com' }
+    ]
   },
 
   /**
