@@ -68,5 +68,9 @@ En caso de querer estilos, los ponemos dentro de un `<style>` y no debemos preoc
 Y finalmente, todo lo que no sea JS ni CSS, se pone libremente debajo. Así de fácil, así de sencillo.
 Si esto te sorprendió, te recomiendo echarle un ojito a su [documentación](https://svelte.dev/) 👁.
 
+::: tip
+Por cierto, mi página personal [fergv.com](https://fergv.com) está hecha con Svelte y [Sapper](https://sapper.svelte.dev/) (el framework de Svelte). Te dejo el link al [repositorio](https://github.com/FerGv/FerGv.github.io) por si quieres revisar a detalle.
+:::
+
 Bueno, esto es todo por hoy, espero hayas disfrutado la lectura y nos vemos en el siguiente artículo.
 Happy coding! 🥸
