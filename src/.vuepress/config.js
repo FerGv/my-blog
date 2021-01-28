@@ -39,6 +39,7 @@ module.exports = {
     editLinks: true,
     docsDir: 'src',
     smoothScroll: true,
+    displayAllHeaders: true,
     nav: [
       { text: 'fergv.com', link: 'https://fergv.com' },
     ],
@@ -60,6 +61,11 @@ module.exports = {
             buttonText: 'Actualizar'
           }
         },
+        sidebar: [
+          ['/', 'Inicio'],
+          '/welcome/',
+          '/state-of-js-2020/',
+        ],
       },
 
       '/en/': {
