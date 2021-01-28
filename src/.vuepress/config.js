@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#base
    */
-  base: '/my-blog/',
+  // base: '/my-blog/',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#dest
    */
