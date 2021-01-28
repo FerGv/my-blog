@@ -10,7 +10,7 @@
   "repository": "https://github.com/FerGv/my-blog",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "build": "vuepress build src && source deploy-gh-pages.sh"
   },
   "license": "MIT",
   "devDependencies": {
