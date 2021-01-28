@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: ./profile-photo.jpeg
+heroImage: /profile-photo.jpeg
 heroText: Hola, bienvenido a mi blog
 tagline: 
 actionText: Comencemos →
