@@ -86,6 +86,11 @@ module.exports = {
             buttonText: 'Refresh'
           }
         },
+        sidebar: [
+          ['/en/', 'Home'],
+          '/en/welcome/',
+          '/en/state-of-js-2020/',
+        ],
       },
     }
   },
