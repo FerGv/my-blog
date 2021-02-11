@@ -1,5 +1,9 @@
 const { description } = require('../../package');
 
+// Sidebars
+const spanishSidebar = require('./sidebars/es');
+const englishSidebar = require('./sidebars/en');
+
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#base
@@ -26,7 +30,8 @@ module.exports = {
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }], ['link', { rel: 'icon', href: '/favicon.svg' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'icon', href: '/favicon.svg' }],
   ],
 
   /**
@@ -40,9 +45,7 @@ module.exports = {
     docsDir: 'src',
     smoothScroll: true,
     displayAllHeaders: true,
-    nav: [
-      { text: 'fergv.com', link: 'https://fergv.com' },
-    ],
+    nav: [{ text: 'fergv.com', link: 'https://fergv.com' }],
     locales: {
       '/': {
         selectText: 'Idiomas',
@@ -58,14 +61,10 @@ module.exports = {
         serviceWorker: {
           updatePopup: {
             message: 'Nuevo contenido disponible.',
-            buttonText: 'Actualizar'
-          }
+            buttonText: 'Actualizar',
+          },
         },
-        sidebar: [
-          ['/', 'Inicio'],
-          '/welcome/',
-          '/state-of-js-2020/',
-        ],
+        sidebar: spanishSidebar,
       },
 
       '/en/': {
@@ -83,25 +82,18 @@ module.exports = {
         serviceWorker: {
           updatePopup: {
             message: 'New content is available.',
-            buttonText: 'Refresh'
-          }
+            buttonText: 'Refresh',
+          },
         },
-        sidebar: [
-          ['/en/', 'Home'],
-          '/en/welcome/',
-          '/en/state-of-js-2020/',
-        ],
+        sidebar: englishSidebar,
       },
-    }
+    },
   },
 
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
-  ],
+  plugins: ['@vuepress/plugin-back-to-top', '@vuepress/plugin-medium-zoom'],
 
   /**
    * Locales，ref：https://v1.vuepress.vuejs.org/guide/i18n.html
@@ -112,13 +104,13 @@ module.exports = {
     '/': {
       lang: 'es-MX', // this will be set as the lang attribute on <html>
       title: 'Mi blog',
-      description: 'Mi blog personal'
+      description: 'Mi blog personal',
     },
 
     '/en/': {
       lang: 'en-US',
       title: 'My blog',
-      description: 'My personal blog'
-    }
-  }
+      description: 'My personal blog',
+    },
+  },
 };
