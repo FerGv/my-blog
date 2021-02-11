@@ -25,7 +25,7 @@ Esto es posible gracias a los valores "falsy" y "truthy", es decir, valores que 
 | undefined         |                                 |
 | NaN               |                                 |
 
-Posiblemente te estés preguntando ¿por qué el arreglo y el objeto vacío no se consideran falsos?. Esto se debe a que lo que JS evalúa en ellos es su referencia, en lugar de su contenido. Y estas referencias se crean automáticamente en la creación, por lo que siempre serán verdaderos.
+Posiblemente te estés preguntando ¿por qué el arreglo y el objeto vacío no se consideran falsos?. Esto se debe a que lo que JS evalúa en ellos es su referencia, en lugar de su contenido. Y estas referencias se generan automáticamente en la declaración, por lo que siempre serán verdaderos.
 
 ::: warning
 Ten mucho cuidado al momento de condicionar usando arreglos y objetos. Para su uso correcto, evalúa explícitamente su contenido. Por ejemplo:
