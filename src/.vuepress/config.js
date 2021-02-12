@@ -107,6 +107,8 @@ module.exports = {
           owner: 'fergv',
           admin: ['fergv'],
           distractionFreeMode: false,
+          proxy:
+            'https://cors-anywhere-fergv.herokuapp.com/https://github.com/login/oauth/access_token',
         },
       },
     ],
