@@ -97,19 +97,9 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     [
-      'vuepress-plugin-comment',
+      'vuepress-plugin-disqus',
       {
-        choosen: 'gitalk',
-        options: {
-          clientID: '397c148f46b3b9ea5ece',
-          clientSecret: 'e5f91c3612a66211248fe00ec30a685ef8c467e1',
-          repo: 'my-blog-comments',
-          owner: 'fergv',
-          admin: ['fergv'],
-          distractionFreeMode: false,
-          proxy:
-            'https://cors-anywhere-fergv.herokuapp.com/https://github.com/login/oauth/access_token',
-        },
+        shortname: 'my-blog-fergv',
       },
     ],
   ],

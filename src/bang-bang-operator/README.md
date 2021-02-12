@@ -74,3 +74,5 @@ const name = 'Fer';
 Bueno, esto es todo por hoy. Nos vemos en la próxima.
 
 Happy coding! 🥸
+
+<Disqus />

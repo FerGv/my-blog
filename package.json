@@ -14,9 +14,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.5.3"
-  },
-  "dependencies": {
-    "vuepress-plugin-comment": "^0.7.3"
+    "vuepress": "^1.5.3",
+    "vuepress-plugin-disqus": "^0.2.0"
   }
 }

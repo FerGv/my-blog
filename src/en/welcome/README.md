@@ -13,3 +13,5 @@ If you were wondering, this site is built with [VuePress](https://vuepress.vuejs
 :::
 
 ![Hello](./hello.gif)
+
+<Disqus />

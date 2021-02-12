@@ -76,3 +76,5 @@ By the way, my personal website [fergv.com](https://fergv.com) is built with Sve
 Well, that's it for today, I hope you have enjoyed the post. See you in the next article.
 
 Happy coding! 🥸
+
+<Disqus />

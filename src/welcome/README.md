@@ -13,3 +13,5 @@ Por si tienes curiosidad, este sitio está hecho con [VuePress](https://vuepress
 :::
 
 ![Hello](./hello.gif)
+
+<Disqus />
