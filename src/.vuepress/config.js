@@ -93,7 +93,24 @@ module.exports = {
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: ['@vuepress/plugin-back-to-top', '@vuepress/plugin-medium-zoom'],
+  plugins: [
+    '@vuepress/plugin-back-to-top',
+    '@vuepress/plugin-medium-zoom',
+    [
+      'vuepress-plugin-comment',
+      {
+        choosen: 'gitalk',
+        options: {
+          clientID: '397c148f46b3b9ea5ece',
+          clientSecret: 'e5f91c3612a66211248fe00ec30a685ef8c467e1',
+          repo: 'my-blog-comments',
+          owner: 'fergv',
+          admin: ['fergv'],
+          distractionFreeMode: false,
+        },
+      },
+    ],
+  ],
 
   /**
    * Locales，ref：https://v1.vuepress.vuejs.org/guide/i18n.html
