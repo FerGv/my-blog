@@ -48,24 +48,24 @@ But before you run out, let me tell you that Svelte comes with a very attractive
   let name = 'Fer';
 
   // Reactive method
-  const changeName = () => name = 'Pedro';
+  const changeName = () => (name = 'Pedro');
 </script>
 
 <style>
-p {
-  color: red;
-}
+  p {
+    color: red;
+  }
 </style>
 
 <p>Hello {name}</p>
 
-<button on:click={changeName}>Change name</button>
+<button on:click="{changeName}">Change name</button>
 ```
 
 As you can see, we simply declare a variable, and it automatically turns in a reactive variable (in fact, Svelte is as intelligent as it can determinate which variables must be reactive and which must not, but those are technical details for other post). And to declare reactive methods, it's as simple as declaring a function. Everything within a `<script>` tag.
 
 In case you want to add some styles, you need to put them within a `<style>` tag and you don't have to worry about writing super weird class names to avoid collisions. Svelte isolates every component styles.
-Finally, anything else apart from JS or CSS, can be written below without any special treatment. A piece of cake, it isn't?
+Finally, anything else apart from JS or CSS, can be written below without any special treatment. A piece of cake, isn't it?
 
 If you got shocked, I recommend getting dig into its [documentation](https://svelte.dev/) 👁.
 
