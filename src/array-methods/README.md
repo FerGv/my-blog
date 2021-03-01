@@ -301,7 +301,74 @@ Para casos sencillos, donde lo que se busca es un string o un número, puede ser
 
 ## flat [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/flat)
 
+Algunas veces terminamos con los datos que necesitamos pero anidados, algo como esto:
+
+```js
+const calificacionesAnidadas = [[10], [8], [10]];
+```
+
+Parece raro pero si te llegas a encontrar en esta situación, `flat` es tu solución. Este método "aplanará" el arreglo, es decir, obtendrá los elementos anidados y los dejará en el nivel superior. Veamos un ejemplo:
+
+```js
+const calificacionesAnidadas = [[10], [8], [10]];
+const calificaciones = calificacionesAnidadas.flat();
+// -> [10,8,10]
+```
+
+`flat` recibe un argumento opcional con el que se puede indicar cuantos niveles en profundidad va a recorrer. Por defecto, solo recorrerá el primer nivel de anidamiento.
+
+```js
+const calificacionesAnidadas = [[10], [8, [5]], [10, [[7], [4]]]];
+const calificacionesNivel1 = calificacionesAnidadas.flat();
+// -> [10, 8, [5], 10, [[7], [4]]]
+
+const calificacionesNivel2 = calificacionesAnidadas.flat(2);
+// -> [10, 8, 5, 10, [7], [4]]
+
+const calificacionesNivel3 = calificacionesAnidadas.flat(3);
+// -> [10, 8, 5, 10, 7, 4]
+```
+
+A mi parecer, estas situaciones son algo extremas y espero no te las encuentres muy seguido 😅, pero ahora ya sabes cómo lidiar con ellas.
+
+::: tip
+En caso de que no sepas cuántos niveles de anidamiento puede haber, existe un truco que te puede ayudar. Si pasas como argumento `Infinity`, automáticamente recorrerá todos los niveles de profundidad.
+
+```js
+const calificacionesAnidadas = [[10], [8, [5]], [10, [[7], [4]]]];
+const calificacionesTodosLosNiveles = calificacionesAnidadas.flat(Infinity);
+// -> [10, 8, 5, 10, 7, 4]
+```
+
+:::
+
 ## flatMap [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/flatMap)
+
+`flatMap` como su nombre lo indica, es una combinación entre `map` y `flat`, es decir, puedes indicar la manera en que se van a manipular los elementos del arreglo para después "aplanarlos" o quitar los anidamientos. Sé que está confuso, pero siempre un poco de código ayuda a clarificar.
+
+```js
+const ordenes = [
+  { ordenId: '001', cliente: 'Fer', productos: ['manzana', 'pera', 'mango'] },
+  { ordenId: '002', cliente: 'Pedro', productos: ['sandía'] },
+  { ordenId: '003', cliente: 'Toño', productos: ['uva', 'naranja'] },
+];
+
+// map y flat
+const productosVendidosArreglos = ordenes.map((orden) => orden.productos);
+// -> [['manzana', 'pera', 'mango'], ['sandía'], ['uva', 'naranja']]
+const productosVendidos = productosVendidosArreglos.flat();
+// -> ['manzana', 'pera', 'mango', 'sandía', 'uva', 'naranja']
+
+// flatMap
+const productosVendidos = ordenes.flatMap((orden) => orden.productos);
+// -> ['manzana', 'pera', 'mango', 'sandía', 'uva', 'naranja']
+```
+
+::: warning
+`flatMap` solo recorre un nivel en profundidad.
+:::
+
+Espero te ayude este pequeño acordeón sobre métodos. Al inicio puede ser un poco difícil cambiar el **for** de toda la vida por este tipo de funciones, pero una vez que te acostumbras, te aseguro que ahorrarás mucho tiempo y esfuerzo.
 
 Happy coding! 🥸
 
