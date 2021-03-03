@@ -10,7 +10,7 @@ Así que manos a la obra.
 La mayoría de los métodos que veremos usan [callbacks](https://developer.mozilla.org/es/docs/Glossary/Callback_function), así que procura darle una checada antes de seguir.
 :::
 
-## forEach [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
+## [forEach](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
 
 ¿Te ha pasado que deserías una forma más fácil de recorrer un arreglo sin tener que preocuparte por los índices o estar obteniendo la longitud del arreglo? A mí me pasó y estoy seguro que a ti también, pero ya no es problema gracias al nuevo método `forEach` ya que él se encargará de hacer el trabajo sucio por nosotros. Te muestro cómo:
 
@@ -46,7 +46,7 @@ perritos.forEach((perrito, index) => console.log(`${index}.- ${perrito}`));
 Durante este tutorial estaremos usando [funciones flecha](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions) para simplificar el código pero puedes usar funciones tradicionales sin ningún problema.
 :::
 
-## filter [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
+## [filter](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
 
 Un caso de uso muy común es obtener solo ciertos elementos que cumplan determinada condición, por ejemplo, usuarios activos, tareas terminadas, etc. Para esto usaremos el método `filter`, el cual recibe una función que debe retornar un valor [falsy/truthy](../bang-bang-operator/). Al final nos regresará un nuevo arreglo con los elementos que hayan retornado verdadero.
 
@@ -65,7 +65,7 @@ const usuariosActivos = usuarios.filter((usuario) => usuario.activo);
 Recuerda que `filter` no modifica el arreglo original.
 :::
 
-## find [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/find)
+## [find](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/find)
 
 El método `find` es muy parecido a `filter`, ya que nos ayuda a buscar un elemento que cumpla una determinada condición. La única diferencia es que `find` nos regresará solo un elemento o `null` en caso de que no lo encuentre.
 
@@ -83,7 +83,7 @@ const ordenNoEncontrada = ordenes.find((orden) => orden.cliente === 'Pepito');
 // -> null
 ```
 
-## findIndex [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/findIndex)
+## [findIndex](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/findIndex)
 
 `findIndex` es muy similar a `find`, pero en lugar de regresar el elemento, únicamente regresará el índice donde lo encontró. En caso de no encontrar coincidencia, retornará -1.
 
@@ -129,7 +129,7 @@ La clave está en que -1 no es un valor [falsy](../bang-bang-operator/), es deci
 
 :::
 
-## map [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
+## [map](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
 
 A veces necesitamos modificar todos los elementos de un arreglo de una forma especial pero sin alterar el arreglo original. Para esto tenemos `map`, el cual nos regresará un nuevo arreglo con los datos modificados en él. Veamos un ejemplo:
 
@@ -142,7 +142,7 @@ const numerosDoble = numeros.map((numero) => numero * 2);
 
 Dentro de la función `map` puedes hacer cualquier tipo de operación, así que imagina las posibilidades 😮. Pero ten cuidado si vas a hacer algo asíncrono, no obtendrás el resultado esperado 😬.
 
-## some [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/some)
+## [some](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/some)
 
 Con `some` podemos verificar si algún elemento dentro de nuestro arreglo cumple cierta condición. Con al menos uno que cumpla, `some` retornará verdadero. En caso contrario, retornará falso.
 
@@ -179,7 +179,7 @@ const hayPar = numeros.some(esPar());
 
 :::
 
-## every [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/every)
+## [every](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/every)
 
 Con este método podemos verificar que todos los elementos de la colección cumplan cierta condición. Podríamos decir que es el contrario de `some`, porque con un elemento que no cumpla, `every` retornará falso.
 
@@ -199,7 +199,7 @@ const todosAprobaron = calificaciones.every(aproboExamen);
 // -> false
 ```
 
-## reduce [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
+## [reduce](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
 
 `reduce` te permite operar todos los elementos de un arreglo y al final obtener un único valor como resultado. Esto suena raro pero un ejemplo lo puede explicar mejor:
 
@@ -267,7 +267,7 @@ Para ese sistema necesitaba mostrar una tabla con cada tópico como columna sin 
 Normalmente `reduce` se usa para valores numéricos, pero la gama de posibilidades es realmente grande.
 :::
 
-## join [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/join)
+## [join](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/join)
 
 Con `join` podemos formar un nuevo string (cadena de texto) uniendo todos los elementos de la colección. Nosotros podemos elegir el caracter o caracteres que se intercalarán entre los elementos. Si no pasamos ningún argumento, por defecto unirá los elementos con una coma (,).
 
@@ -283,7 +283,7 @@ nombres.join(' - ');
 
 Un método simple pero bastante útil.
 
-## includes [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/includes)
+## [includes](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/includes)
 
 `includes` nos permite verificar si un elemento se encuentra en un arreglo. El valor de retorno será un booleano, por lo que puedes usarlo en condicionales.
 
@@ -299,7 +299,7 @@ nombres.includes('Pepito');
 
 Para casos sencillos, donde lo que se busca es un string o un número, puede ser muy efectivo.
 
-## flat [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/flat)
+## [flat](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/flat)
 
 Algunas veces terminamos con los datos que necesitamos pero anidados, algo como esto:
 
@@ -342,7 +342,7 @@ const calificacionesTodosLosNiveles = calificacionesAnidadas.flat(Infinity);
 
 :::
 
-## flatMap [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/flatMap)
+## [flatMap](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/flatMap)
 
 `flatMap` como su nombre lo indica, es una combinación entre `map` y `flat`, es decir, puedes indicar la manera en que se van a manipular los elementos del arreglo para después "aplanarlos" o quitar los anidamientos. Sé que está confuso, pero siempre un poco de código ayuda a clarificar.
 
