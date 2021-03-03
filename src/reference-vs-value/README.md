@@ -85,3 +85,5 @@ Pero ten cuidado, este operador solo copia el primer nivel dentro de la colecci�
 Como conclusión, para valores primitivos se crea una copia de su valor y para los no primitivos, lo que se copia es la referencia. Recuerda esto la siguiente vez que necesites referenciar un valor o pasarlo como argumento.
 
 Happy coding! 🥸
+
+<Disqus />

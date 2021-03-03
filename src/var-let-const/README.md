@@ -229,3 +229,5 @@ Actualmente no existen arreglos ni objetos inmutables, pero no por mucho tiempo.
 Posiblemente te encuentres con `var` en varios tutoriales o [código legacy](https://es.wikipedia.org/wiki/C%C3%B3digo_heredado), pero como recomendación **ya no lo uses**. Procura usar las nuevas características del lenguaje y siempre opta por `let` y `const`.
 
 Nos vemos en la próxima. Happy Coding! 🥸
+
+<Disqus />
