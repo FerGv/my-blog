@@ -368,6 +368,8 @@ const productosVendidos = ordenes.flatMap((orden) => orden.productos);
 `flatMap` solo recorre un nivel en profundidad.
 :::
 
+## Conclusión
+
 Espero te ayude este pequeño acordeón sobre métodos. Al inicio puede ser un poco difícil cambiar el **for** de toda la vida por este tipo de funciones, pero una vez que te acostumbras, te aseguro que ahorrarás mucho tiempo y esfuerzo.
 
 Happy coding! 🥸
