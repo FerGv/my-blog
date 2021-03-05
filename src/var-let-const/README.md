@@ -6,6 +6,8 @@ En los tiempos oscuros de Javascript, cuando era el chico feo de los lenguajes d
 var miVariable = 'hola';
 ```
 
+![Patrick](./patrick.jpg)
+
 Por la naturaleza de JS, no es necesario declarar el tipo de variable, ya que es [dinámicamente tipado](https://developer.mozilla.org/es/docs/Glossary/Dynamic_typing), es decir, el intérprete reconoce el tipo al momento de la ejecución. Es por esto que nunca verás declaraciones al estilo Java o C:
 
 ```java
@@ -225,6 +227,8 @@ console.log(edades);
 
 Actualmente no existen arreglos ni objetos inmutables, pero no por mucho tiempo. Ya están trabajando en la propuesta de [Records y Tuplas](https://github.com/tc39/proposal-record-tuple) que muy pronto se incorporará al estándar.
 :::
+
+## Conclusión
 
 Posiblemente te encuentres con `var` en varios tutoriales o [código legacy](https://es.wikipedia.org/wiki/C%C3%B3digo_heredado), pero como recomendación **ya no lo uses**. Procura usar las nuevas características del lenguaje y siempre opta por `let` y `const`.
 
