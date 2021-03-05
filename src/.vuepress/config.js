@@ -16,7 +16,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Mi blog',
+  title: 'FerGv blog',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -112,7 +112,7 @@ module.exports = {
     // As a special case, the default locale can use '/' as its path.
     '/': {
       lang: 'es-MX', // this will be set as the lang attribute on <html>
-      title: 'Mi blog',
+      title: 'FerGv blog',
       description: 'Mi blog personal',
     },
 
