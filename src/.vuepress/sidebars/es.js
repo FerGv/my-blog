@@ -6,6 +6,7 @@ const items = [
   '/array-methods/',
   '/var-let-const/',
   '/reference-vs-value/',
+  '/es6-features/',
 ];
 
 module.exports = items;
