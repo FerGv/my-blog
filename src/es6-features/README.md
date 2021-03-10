@@ -85,6 +85,52 @@ Más adelante veremos acerca de [clases](#clases).
 
 ## [Interpolación](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Template_literals)
 
+Ahora podemos interpolar variables en cadenas de texto con los backticks `` ` `` (es el símbolo de acento grave, checa la distribución de tu teclado para saber cómo obtenerlo).
+
+```js
+const nombre = 'Fer';
+
+// Concatenación
+console.log('Hola ' + nombre);
+
+// Interpolación
+console.log(`Hola ${nombre}`);
+```
+
+Esto nos ayuda a escribir código mucho más claro y evitar esos molestos símbolos de `+` entre las cadenas de texto. También nos permiten escribir cadenas multilínea. Un caso muy común es cuando queremos agregar un elemento HTML mediante JS.
+
+<!-- prettier-ignore -->
+```js
+const estudiante = 'Fer';
+const listaEstudiantes = document.querySelector('ul');
+
+// Concatenación
+listaEstudiantes.insertAdjacentHTML('beforeend',
+  '<li>' +
+    '<a href="http://midominio.com/estudiantes/' + estudiante + '">' +
+      estudiante +
+    '</a>' +
+  '</li>'
+);
+
+// Interpolación
+listaEstudiantes.insertAdjacentHTML('beforeend',
+  `<li>
+    <a href="http://midominio.com/estudiantes/${estudiante}">
+      ${estudiante}
+    </a>
+  </li>`
+);
+```
+
+Definitivamente mucho mejor y limpio 🤓👌.
+
+::: tip
+[insertAdjacentHTML](https://developer.mozilla.org/es/docs/Web/API/Element/insertAdjacentHTML) es la nueva forma de agregar un elemento HTML escribiendo su estructura como cadena de texto. Si estás familiarizado con [jQuery](https://jquery.com/), sería el equivalente a [append](https://api.jquery.com/append/) y [prepend](https://api.jquery.com/prepend/).
+
+Por cierto, **ya no uses jQuery, por favor 🥺**.
+:::
+
 ## [Desestructuración](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 ## [Operador spread](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
