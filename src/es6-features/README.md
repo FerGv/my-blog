@@ -133,9 +133,85 @@ Por cierto, **ya no uses jQuery, por favor 🥺**.
 
 ## [Desestructuración](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
+La `desestructuración` nos permite obtener valores de un arreglo u objeto y asignarlos a variables en una misma sentencia.
+
+```js
+// ---------------- Antes ----------------
+const alumnos = ['Fernando', 'Anahi'];
+const alumno1 = alumnos[0];
+const alumno2 = alumnos[1];
+
+const persona = { nombre: 'Fer', edad: 23 };
+const nombre = persona.nombre;
+const edad = persona.edad;
+
+// ---------------- Ahora ----------------
+const [alumno1, alumno2] = ['Fernando', 'Anahi'];
+// -> Fernando, Anahi
+
+const { nombre, edad } = { nombre: 'Fer', edad: 23 };
+// -> Fer, 23
+```
+
+También puedes declarar las variables primero, pero debes cambiar a `let`.
+
+```js
+let alumno1, alumno2, nombre, edad;
+[alumno1, alumno2] = ['Fernando', 'Anahi'];
+// Debes agrupar esta sentencia en paréntesis para evitar errores de sintaxis.
+// Esto se debe a que las llaves representan bloques de código.
+({ nombre, edad } = { nombre: 'Fer', edad: 23 });
+```
+
+Puedes usar el [operador rest](#parámetros-rest) para guardar en un arreglo u objeto el resto de valores.
+
+```js
+const [alumno1, ...restoAlumnos] = ['Fernando', 'Anahi', 'Pedro', 'Laura'];
+// -> Fernando, [Anahi, Pedro, Laura]
+
+const { nombre, ...restoPersona } = {
+  nombre: 'Fer',
+  edad: 23,
+  profesion: 'desarrollador',
+  género: 'masculino',
+};
+// -> Fer, { edad: 23, profesion: 'desarrollador', género: 'masculino' }
+```
+
+Para los objetos puedes cambiar el nombre de la propiedad que estás desestructurando. Solo escribe dos puntos y el nuevo nombre.
+
+```js
+const { nombre: miNombre, edad: miEdad } = { nombre: 'Fer', edad: 23 };
+console.log(miNombre, miEdad);
+// -> Fer, 23
+```
+
+También puedes asignar valores por defecto en caso de que el objeto no tenga la propiedad que buscas o no exista ese índice en el arreglo.
+
+```js
+const [alumno1, alumno2 = 'Anahi'] = ['Fernando'];
+// -> Fer, Anahi
+
+const { nombre: miNombre, edad: miEdad = 30 } = { nombre: 'Fer' };
+// -> Fer, 30
+```
+
+::: tip
+Ahora puedes hacer un intercambio de valores fácilmente. Olvídate de declarar una variable auxiliar como en los viejos tiempos.
+
+```js
+let a = 1;
+let b = 2;
+[a, b] = [b, a];
+console.log(a, b);
+// -> 2, 1
+```
+
+:::
+
 ## [Operador spread](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-## [Operador rest](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+## [Parámetros rest](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
 ## [Parámetros por defecto](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 
