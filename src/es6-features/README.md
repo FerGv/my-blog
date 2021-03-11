@@ -244,6 +244,36 @@ En caso de que tengas arreglos u objetos anidados, sus referencias se mantendrá
 
 ## [Parámetros rest](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
+Los `parámetros rest` usan la misma sintaxis que el [operador spread](#operador-spread): los tres puntos (...). Pero en este caso se usa para indicar que se recibirá un número indefinido de parámetros en una función. Veamos cómo:
+
+```js
+function suma(...numeros) {
+  return numeros.reduce((total, numero) => total + numero, 0);
+}
+
+suma(1, 2, 3, 4);
+// -> 10
+```
+
+Los argumentos se guardan en un arreglo, el cual **posee todos los métodos y propiedades de arreglos (map, filter, reduce, etc.)**. Hago énfasis en esto porque la forma antigua de resolver este problema era con **arguments**, el cual es un [Array-like](https://stackoverflow.com/questions/29707568/javascript-difference-between-array-and-array-like-object), es decir, comparte cierta similitud con los arreglos pero no es uno, por lo que no puedes usar métodos como map.
+
+Este es el mismo ejemplo pero con **arguments**. Como ves, **arguments** no es definido como parámetro, simplemente accedemos a él dentro la función. Bastante extraño a mi parecer. **Ya no lo uses 😅.**
+
+```js
+function suma() {
+  let total = 0;
+
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+
+  return total;
+}
+
+suma(1, 2, 3, 4);
+// -> 10
+```
+
 ## [Parámetros por defecto](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 
 ## [Promesas](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
