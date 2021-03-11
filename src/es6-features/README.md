@@ -209,6 +209,22 @@ console.log(a, b);
 
 :::
 
+::: tip
+También puedes desestructurar los parámetros de una función.
+
+```js
+const persona = { nombre: 'Fer', edad: 23 };
+
+const logPersona = (persona) => console.log(persona.nombre, persona.edad);
+// -> Fer, 23
+
+const logPersona = ({ nombre, edad }) => console.log(nombre, edad);
+// -> Fer, 23
+```
+
+Debes escribir los paréntesis siempre que quieras desestructurar.
+:::
+
 ## [Operador spread](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 Con esta nueva sintaxis podemos "expandir" un arreglo u objeto dentro de otro arreglo, objeto o función. Lo que hará el **operador spread (`...`)** es tomar cada item o propiedad y los copiará donde tú le indiques.
@@ -274,7 +290,87 @@ suma(1, 2, 3, 4);
 // -> 10
 ```
 
+::: tip
+Si requieres más parámetros en tu función, **siempre deja el parámetro rest al final**.
+
+```js
+function separarNombres(separador, ...nombres) {
+  return nombres.join(separador);
+}
+
+separarNombres('-', 'Fer', 'Anahí', 'Ana');
+// -> Fer-Anahí-Ana
+```
+
+:::
+
 ## [Parámetros por defecto](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+
+Esta funcionalidad es una de las que más necesitaba el lenguaje, ya que es muy común que nuestras funciones no requieran todos los parámetros en todas las llamadas. Y la forma en que se hacía anteriormente era algo incómoda.
+
+```js
+// ----------- Antes -----------
+function formatearFecha(fecha, mostrarHora) {
+  mostrarHora = mostrarHora || false;
+
+  // Mandamos `undefined` para evitar que la propiedad
+  // `timeStyle` aparezca en el objeto final.
+  const options = {
+    dateStyle: 'short',
+    timeStyle: mostrarHora ? 'short' : undefined,
+  };
+
+  return new Intl.DateTimeFormat('es-MX', options).format(fecha);
+}
+
+// ----------- Ahora -----------
+function formatearFecha(fecha, mostrarHora = false) {
+  const options = {
+    dateStyle: 'short',
+    timeStyle: mostrarHora ? 'short' : undefined,
+  };
+
+  return new Intl.DateTimeFormat('es-MX', options).format(fecha);
+}
+```
+
+Con el operador `OR ||` conseguíamos el resultado esperado, ya que si un parámetro no es definido, llega a la función como `undefined` y evalúa a falso. En pocas palabras le decíamos "toma el primer valor si existe, sino toma el segundo".
+
+```js
+mostrarHora = undefined || false;
+```
+
+Funcionaba pero no era lo ideal, ya que escribíamos código innecesario. Ahora con el simple hecho de igualar el parámetro al valor que necesitamos, es más que suficiente.
+
+```js
+function formatearFecha(fecha, mostrarHora = false) {...}
+```
+
+::: warning
+Si quieres forzar a que un parámetro tome el valor por defecto, debes pasar `undefined` explícitamente, ya que es el único valor con el que indicamos que el parámetro no existe.
+
+```js
+function mostrarNombre(nombre = 'Juan', apellido = 'Hernandez') {
+  console.log(`${nombre} ${apellido}`);
+}
+
+mostrarNombre();
+// -> Juan Hernandez
+mostrarNombre('Pedro');
+// -> Pedro Hernandez
+mostrarNombre(undefined, 'Sánchez');
+// -> Juan Sánchez
+```
+
+:::
+
+::: tip
+Con la nueva API [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) del navegador para fechas, podemos evitar el uso de librerías externas en muchos casos.
+:::
+
+::: tip
+La sintaxis `condición ? verdadero : falso` se conoce como [operador ternario](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) y es útil para escribir `if`s de manera sencilla.
+:::
 
 ## [Promesas](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
@@ -303,3 +399,5 @@ Te dejo esta [lectura](https://medium.com/@nikgraf/why-you-should-enforce-dangli
 ## [Atributos privados](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
 
 <Disqus />
+```
+````
