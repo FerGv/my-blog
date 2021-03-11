@@ -1,6 +1,13 @@
-# ES6+ características
+# ES6+ características (Parte 1)
 
 Con la versión de ECMAScript 2015 (ES6) y todas las que siguieron, Javascript dio un giro total e incorporó muchas nuevas características que mejoraron y arreglaron el lenguaje. Hoy trataré de mostrarte algunas de las más relevantes pero te recomiendo revisar este [repositorio](https://github.com/tc39/proposals) para estar al tanto de las novedades en JS.
+
+Este artículo se dividirá en varias partes para no hacerlo muy largo y para poder actualizarlo fácilmente conforme vaya evolucionando el estándar. Aquí puedes encontrar los enlaces:
+
+- Parte 1 (funciones flecha, interpolación, desestructuración)
+- Parte 2
+- Parte 3
+- Parte 4
 
 ## [Funciones flecha](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
@@ -386,7 +393,7 @@ La sintaxis `condición ? verdadero : falso` se conoce como [operador ternario](
 
 ## [Comas finales (trailing commas)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas)
 
-(Lo siento, no encontré la documentación oficial en español x2 😬)
+(Lo siento, no encontré la documentación oficial en español 😬)
 
 Te dejo esta [lectura](https://medium.com/@nikgraf/why-you-should-enforce-dangling-commas-for-multiline-statements-d034c98e36f8)(en inglés 😬) y esta [pregunta de StackOverflow](https://es.stackoverflow.com/questions/202727/como-funcionan-los-trailing-commas-en-javascript) para más información.
 
@@ -398,6 +405,44 @@ Te dejo esta [lectura](https://medium.com/@nikgraf/why-you-should-enforce-dangli
 
 ## [Atributos privados](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
 
+## New Object methods
+
+### [values()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
+
+### [entries()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+
+### [fromEntries()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
+
+## New Array methods
+
+De estos hablé en detalle en mi artículo [Métodos de arreglos](../array-methods/).
+
+## New String methods
+
+### [matchAll()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)
+
+### [replaceAll()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
+
+(Lo siento, no encontré la documentación oficial en español 😬)
+
+## [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+
+## Promise methods
+
+### [all()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
+
+### [allSettled()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
+
+(Lo siento, no encontré la documentación oficial en español 😬)
+
+### [any()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
+
+(Lo siento, no encontré la documentación oficial en español 😬)
+
+### [race()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
+
+## [Separador numérico](https://github.com/tc39/proposal-numeric-separator)
+
+(Lo siento, no encontré la documentación oficial en español 😬)
+
 <Disqus />
-```
-````
