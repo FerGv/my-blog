@@ -137,7 +137,7 @@ La `desestructuración` nos permite obtener valores de un arreglo u objeto y asi
 
 ```js
 // ---------------- Antes ----------------
-const alumnos = ['Fernando', 'Anahi'];
+const alumnos = ['Fernando', 'Anahí'];
 const alumno1 = alumnos[0];
 const alumno2 = alumnos[1];
 
@@ -146,8 +146,8 @@ const nombre = persona.nombre;
 const edad = persona.edad;
 
 // ---------------- Ahora ----------------
-const [alumno1, alumno2] = ['Fernando', 'Anahi'];
-// -> Fernando, Anahi
+const [alumno1, alumno2] = ['Fernando', 'Anahí'];
+// -> Fernando, Anahí
 
 const { nombre, edad } = { nombre: 'Fer', edad: 23 };
 // -> Fer, 23
@@ -157,7 +157,7 @@ También puedes declarar las variables primero, pero debes cambiar a `let`.
 
 ```js
 let alumno1, alumno2, nombre, edad;
-[alumno1, alumno2] = ['Fernando', 'Anahi'];
+[alumno1, alumno2] = ['Fernando', 'Anahí'];
 // Debes agrupar esta sentencia en paréntesis para evitar errores de sintaxis.
 // Esto se debe a que las llaves representan bloques de código.
 ({ nombre, edad } = { nombre: 'Fer', edad: 23 });
@@ -166,8 +166,8 @@ let alumno1, alumno2, nombre, edad;
 Puedes usar el [operador rest](#parámetros-rest) para guardar en un arreglo u objeto el resto de valores.
 
 ```js
-const [alumno1, ...restoAlumnos] = ['Fernando', 'Anahi', 'Pedro', 'Laura'];
-// -> Fernando, [Anahi, Pedro, Laura]
+const [alumno1, ...restoAlumnos] = ['Fernando', 'Anahí', 'Pedro', 'Laura'];
+// -> Fernando, [Anahí, Pedro, Laura]
 
 const { nombre, ...restoPersona } = {
   nombre: 'Fer',
@@ -189,8 +189,8 @@ console.log(miNombre, miEdad);
 También puedes asignar valores por defecto en caso de que el objeto no tenga la propiedad que buscas o no exista ese índice en el arreglo.
 
 ```js
-const [alumno1, alumno2 = 'Anahi'] = ['Fernando'];
-// -> Fer, Anahi
+const [alumno1, alumno2 = 'Anahí'] = ['Fernando'];
+// -> Fer, Anahí
 
 const { nombre: miNombre, edad: miEdad = 30 } = { nombre: 'Fer' };
 // -> Fer, 30
@@ -210,6 +210,37 @@ console.log(a, b);
 :::
 
 ## [Operador spread](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+Con esta nueva sintaxis podemos "expandir" un arreglo u objeto dentro de otro arreglo, objeto o función. Lo que hará el **operador spread (`...`)** es tomar cada item o propiedad y los copiará donde tú le indiques.
+
+```js
+const grupoA = ['Carlos', 'Pedro'];
+const grupoB = ['Fernando', ...grupoA];
+// -> ['Fernando', 'Carlos', 'Pedro']
+
+const persona = { nombre: 'Anahí' };
+const estudiante = { ...persona, clase: 'Programación' };
+// -> { nombre: 'Anahí', clase: 'Programación' }
+
+const numeros = [3, 5];
+const suma = (a, b) => a + b;
+suma(...numeros);
+// -> 8
+```
+
+Con esto puedes copiar fácilmente un arreglo u objeto.
+
+```js
+const numeros = [1, 2, 3];
+const numerosCopia = [...numeros];
+
+const orden = { id: 1, total: 10 };
+const ordenCopia = { ...orden };
+```
+
+::: warning
+En caso de que tengas arreglos u objetos anidados, sus referencias se mantendrán y cualquier cambio afectará a los originales. Revisa mi artículo sobre [referencias](../reference-vs-value/) para saber más.
+:::
 
 ## [Parámetros rest](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
