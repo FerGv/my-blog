@@ -7,6 +7,7 @@ const items = [
   '/var-let-const/',
   '/reference-vs-value/',
   '/callback-hell/',
+  '/context/',
   '/es6-features/',
 ];
 
