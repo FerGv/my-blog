@@ -6,6 +6,7 @@ const items = [
   '/array-methods/',
   '/var-let-const/',
   '/reference-vs-value/',
+  '/callback-hell/',
   '/es6-features/',
 ];
 
