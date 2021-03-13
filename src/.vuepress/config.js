@@ -44,7 +44,6 @@ module.exports = {
     editLinks: true,
     docsDir: 'src',
     smoothScroll: true,
-    displayAllHeaders: true,
     nav: [{ text: 'fergv.com', link: 'https://fergv.com' }],
     locales: {
       '/': {
