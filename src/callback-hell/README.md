@@ -175,3 +175,5 @@ getPerrito();
 En lo personal trató de usar **async/await** para casi todo porque el código queda más limpio y claro. Además, se lee como si fuera síncrono, una forma de programar con la que la mayoría estamos más acostumbrados. Pero queda a tu consideración cuál usar, solo analiza bien el caso de uso de cada uno.
 
 Hasta la próxima. Happy coding! 🥸
+
+<Disqus />
