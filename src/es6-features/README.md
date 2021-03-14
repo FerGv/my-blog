@@ -6,12 +6,15 @@ Con la versión de ECMAScript 2015 (ES6) y todas las que siguieron, Javascript d
 
 > Imagina que ES6+ es a JS como la armadura es a Tony Stark 😎.
 
-Este artículo se dividirá en varias partes para no hacerlo muy largo y para poder actualizarlo fácilmente conforme vaya evolucionando el estándar. Aquí puedes encontrar los enlaces:
+Este artículo se dividirá para no hacerlo muy largo y para poder actualizarlo fácilmente conforme vaya evolucionando el estándar.
 
-- Parte 1 (funciones flecha, interpolación, desestructuración)
-- Parte 2
-- Parte 3
-- Parte 4
+<!-- Aquí tienes los enlaces:
+
+- Parte 1 **(aquí estás)**
+  - Funciones flecha, Interpolación, Desestructuración, Operador spread, Parámetros rest, Parámetros por defecto
+- [Parte 2](../es6-features-part-2/)
+  - Promesas, Async/await, Encadenamiento opcional, Operador nullish, Módulos, Comas finales (trailing commas)
+- [Parte 3](../es6-features-part-3/) -->
 
 ## [Funciones flecha](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
@@ -383,70 +386,10 @@ Con la nueva API [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/
 La sintaxis `condición ? verdadero : falso` se conoce como [operador ternario](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) y es útil para escribir `if`s de manera sencilla.
 :::
 
-## [Promesas](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+## Conclusión
 
-## [Async/await](https://developer.mozilla.org/es/docs/Learn/JavaScript/Asynchronous/Async_await)
+En lo personal, me encantan las mejoras que se implementaron al lenguaje. Ahora se puede escribir código muy limpio y elegante 😎👌.
 
-## [Encadenamiento opcional](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-
-## [Operador nullish](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
-
-(Lo siento, no encontré la documentación oficial en español 😬)
-
-## [Módulos](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Modules)
-
-## [Comas finales (trailing commas)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas)
-
-(Lo siento, no encontré la documentación oficial en español 😬)
-
-Te dejo esta [lectura](https://medium.com/@nikgraf/why-you-should-enforce-dangling-commas-for-multiline-statements-d034c98e36f8)(en inglés 😬) y esta [pregunta de StackOverflow](https://es.stackoverflow.com/questions/202727/como-funcionan-los-trailing-commas-en-javascript) para más información.
-
-## [Map](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Map)
-
-## [Set](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Set)
-
-## [Clases](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/class)
-
-## [Atributos privados](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
-
-## New Object methods
-
-### [values()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
-
-### [entries()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
-
-### [fromEntries()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
-
-## New Array methods
-
-De estos hablé en detalle en mi artículo [Métodos de arreglos](../array-methods/).
-
-## New String methods
-
-### [matchAll()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)
-
-### [replaceAll()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
-
-(Lo siento, no encontré la documentación oficial en español 😬)
-
-## [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
-
-## Promise methods
-
-### [all()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
-
-### [allSettled()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
-
-(Lo siento, no encontré la documentación oficial en español 😬)
-
-### [any()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
-
-(Lo siento, no encontré la documentación oficial en español 😬)
-
-### [race()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
-
-## [Separador numérico](https://github.com/tc39/proposal-numeric-separator)
-
-(Lo siento, no encontré la documentación oficial en español 😬)
+Te veo pronto. Happy coding! 🥸
 
 <Disqus />

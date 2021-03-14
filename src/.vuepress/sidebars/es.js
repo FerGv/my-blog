@@ -10,6 +10,8 @@ const items = [
   '/environment-variables/',
   '/context/',
   '/es6-features/',
+  // '/es6-features-part-2/',
+  // '/es6-features-part-3/',
 ];
 
 module.exports = items;
