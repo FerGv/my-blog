@@ -8,6 +8,7 @@ Con la versión de ECMAScript 2015 (ES6) y todas las que siguieron, Javascript d
 
 Este artículo se dividirá para no hacerlo muy largo y para poder actualizarlo fácilmente conforme vaya evolucionando el estándar.
 
+<!-- TODO: complete links -->
 <!-- Aquí tienes los enlaces:
 
 - Parte 1 **(aquí estás)**
