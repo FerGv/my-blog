@@ -66,6 +66,24 @@ Cuando el nombre de la propiedad sigue el estilo `lowerCamelCase`, puedes omitir
 
 ## Modo estricto
 
+El [modo estricto](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Strict_mode) le indica al intérprete que debe ser más riguroso en cómo procesa cada instrucción. Javascript es un lenguaje muy "relajado", me refiero a que te permite hacer muchas cosas que normalmente no podrías en otro lenguaje como sumar números y cadenas de texto, usar variables que no han sido declaradas, entre algunas otras.
+
+El modo estricto se activa por defecto en los módulos de ES6, pero si no los estás usando, simplemente agrega la siguiente línea al inicio de tu script:
+
+```js
+'use strict';
+```
+
+Aunque parece un simple string, el intérprete sabe identificarlo y ahora lanzará errores en lugar de fallar silenciosamente. El modo estricto tiene muchos beneficios pero uno de los principales es evitar la creación accidental de variables que no han sido declaradas.
+
+```js
+'use strict';
+
+const nombre = 'Fer';
+Nombre = 'Pedro'; // -> Uncaught ReferenceError: Nombre is not defined
+console.log(nombre);
+```
+
 ## Retorno rápido
 
 ## Módulos
