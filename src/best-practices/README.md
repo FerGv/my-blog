@@ -86,14 +86,63 @@ console.log(nombre);
 
 ## Retorno rápido
 
-## Módulos
+Cuando aprendes a programar te enseñan que un `if` puede tener su contraparte `else` y que debes usarla cuando no se cumpla la condición. Así que con esto en mente, el siguiente código sería correcto:
 
-## No condiciones para booleanos
+```js
+function saludar(nombre) {
+  if (nombre) {
+    return `Hola ${nombre}`;
+  } else {
+    return null;
+  }
+}
+```
+
+Y no está mal pero podemos hacerlo más legible. Ya que solo tenemos dos caminos, uno de ellos podría ser el camino por defecto y el otro la excepción. Así podemos eliminar el `else` y hasta podemos eliminar las llaves y el `null`.
+
+```js
+function saludar(nombre) {
+  if (!nombre) return;
+
+  return `Hola ${nombre}`;
+}
+```
+
+Este patrón se llama **"early return" (retorno rápido)** y es muy usado para terminar la ejecución de una función en cuanto se encuentre un error o excepción. Podríamos decir que es más fácil verificar cuándo no debemos hacer nada.
 
 ## Operador ternario
 
-## Guías de estilo
+El [operador ternario](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) es una simplificación de un `if..else`. La sintaxis es `condicion ? verdadero : falso` y retornará el valor de las expresiones.
+
+```js
+let nombre;
+if (true) {
+  nombre = 'Fer';
+} else {
+  nombre = 'Pedro';
+}
+
+const nombre = true ? 'Fer' : 'Pedro';
+// -> 'Fer'
+```
+
+Con este operador podemos adaptar el ejemplo del punto anterior de la siguiente manera:
+
+```js
+function saludar(nombre) {
+  return nombre ? `Hola ${nombre}` : null;
+}
+
+// Usando funciones flecha
+const saludar = (nombre) => (nombre ? `Hola ${nombre}` : null);
+```
+
+## No condiciones para booleanos
 
 ## Triple igual
 
 ## Objeto en lugar de switch
+
+## Módulos
+
+## Guías de estilo
