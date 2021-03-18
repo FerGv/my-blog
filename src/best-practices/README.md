@@ -46,7 +46,23 @@ class Empleado {
 **Escribe tu código en inglés**. Yo lo escribo en español para mantener la consistencia con el idioma del artículo pero en el mundo real todo lo hago en inglés.
 :::
 
-## Sintaxis reducida en objetos
+## Declarar propiedades en objetos
+
+Al definir propiedades en objetos, normalmente coincide el nombre de la propiedad con el nombre de la variable que guarda su valor. Para estos casos ya no es necesario repetir el nombre. Veamos cómo:
+
+```js
+const nombre = 'Fer';
+
+// Antes
+const persona = { nombre: nombre };
+
+// Ahora
+const persona = { nombre };
+```
+
+::: tip
+Cuando el nombre de la propiedad sigue el estilo `lowerCamelCase`, puedes omitir las comillas.
+:::
 
 ## Modo estricto
 
