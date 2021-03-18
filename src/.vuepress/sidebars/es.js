@@ -12,6 +12,7 @@ const items = [
   '/es6-features/',
   // '/es6-features-part-2/',
   // '/es6-features-part-3/',
+  '/best-practices/',
 ];
 
 module.exports = items;
