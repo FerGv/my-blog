@@ -13,6 +13,7 @@ const items = [
   // '/es6-features-part-2/',
   // '/es6-features-part-3/',
   '/best-practices/',
+  '/jquery/',
 ];
 
 module.exports = items;
