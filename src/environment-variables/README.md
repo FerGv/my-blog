@@ -35,6 +35,8 @@ npm i dotenv
 > Esto la agregará como dependencia a tu proyecto.
 >
 > Previamente debe existir un `package.json`, si no es así, lo puedes crear ejecutando `npm init -y`.
+>
+> `npm` se instala junto con [Node JS](https://nodejs.org/es/).
 
 Después debes crear un archivo `.env` en la raíz de tu proyecto y dentro escribir las variables con el formato `CLAVE=VALOR`.
 
