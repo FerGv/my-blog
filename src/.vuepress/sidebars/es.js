@@ -14,6 +14,7 @@ const items = [
   // '/es6-features-part-3/',
   '/best-practices/',
   '/jquery/',
+  '/regex/',
 ];
 
 module.exports = items;
