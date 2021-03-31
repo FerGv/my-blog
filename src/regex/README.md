@@ -165,6 +165,12 @@ Los comodines son símbolos con significado especial, es decir, tendrán alguna 
 
   `Coincidencias: pala, palo`
 
+  ::: tip
+  También existe la posibilidad de definir el conjunto de caracteres que **no** queremos encontrar. Para esto se utiliza el `^` al inicio del conjunto.
+
+  Por ejemplo, si queremos validar que una cadena no contenga algunos caracteres especiales, podemos escribir `/[^#@+-&]/`.
+  :::
+
 <br>
 
 - **- (guión)**
@@ -176,6 +182,88 @@ Los comodines son símbolos con significado especial, es decir, tendrán alguna 
   `/[A-Z]/` buscará cualquier letra del abecedario en mayúsculas.
 
   `/[0-9]/` buscará cualquier dígito.
+
+## Caracteres de escape
+
+Existen algunos caracteres de escape que representan conjuntos o caracteres especiales, esto nos ayuda a escribir expresiones regulares más sencillas de leer.
+
+<table>
+  <tr>
+    <td><b>/\d/</b></td>
+    <td>
+      <code>/[0-9]/</code>
+      Cualquier dígito
+    </td>
+  </tr>
+  <tr>
+    <td><b>/\D/</b></td>
+    <td>
+      <code>/[^0-9]/</code>
+      Cualquier caracter que no sea dígito
+    </td>
+  </tr>
+  <tr>
+    <td><b>/\w/</b></td>
+    <td>
+      <code>/[A-Za-z0-9_]/</code>
+      Cualquier letra mayúscula o minúscula, dígito o guión bajo
+    </td>
+  </tr>
+  <tr>
+    <td><b>/\W/</b></td>
+    <td>
+      <code>/[^A-Za-z0-9_]/</code>
+      Cualquier caracter que no sea letra mayúscula o minúscula, dígito o guión bajo
+    </td>
+  </tr>
+  <tr>
+    <td><b>/\s/</b></td>
+    <td>Cualquier tipo de espacio (incluye tabulación)</td>
+  </tr>
+  <tr>
+    <td><b>/\S/</b></td>
+    <td>Cualquier caracter que no sea de tipo de espacio</td>
+  </tr>
+  <tr>
+    <td><b>/\t/</b></td>
+    <td>Tabulación horizontal</td>
+  </tr>
+  <tr>
+    <td><b>/\r/</b></td>
+    <td>Retorno de carro</td>
+  </tr>
+  <tr>
+    <td><b>/\n/</b></td>
+    <td>Salto de línea</td>
+  </tr>
+  <tr>
+    <td><b>/\/</b></td>
+    <td>
+      Escapa caracteres para darles un significado especial o diferente al que normalmente tienen.
+      <br>
+      <br>
+      <b>Ejemplo:</b>
+      <br>
+      <ul>
+        <li>
+          <code>/1+2/</code> buscará al menos un <code>1</code> seguido de un <code>2</code>.
+        </li>
+        <li>
+          <code>/1\+2/</code> buscará la suma <code>1+2</code>.
+        </li>
+        <br>
+        <li>
+          <code>/d/</code> buscará una letra <code>d</code>.
+        </li>
+        <li>
+          <code>/\d/</code> buscará un dígito.
+        </li>
+      </ul>
+      <br>
+      Para escapar la diagonal invertida, debes duplicarla: <code>/\\/</code>
+    </td>
+  </tr>
+</table>
 
 ## Modificadores / banderas
 
@@ -262,15 +350,49 @@ Los modificadores son parámetros especiales que alteran la expresión regular e
   Por defecto, las expresiones regulares harán distinción entre mayúsculas y minúsculas.
   :::
 
-## Grupos
-
 ## Condicionales
 
-Si hasta aquí no has comprendido nada, no te preocupes, es un tema que a todos nos cuesta trabajo entender en un principio.
+En ocasiones lo que requieres es validar que un conjunto de caracteres se encuentre antes o después de otro cierto grupo de caracteres, es decir, una búsqueda condicional. Las expresiones regulares también cuentan con una sintaxis especial para esto.
+
+### Búsqueda hacia adelante
+
+_Este tipo de búsqueda verificará los caracteres a la derecha del conjunto a buscar._
+
+- Positiva `/(?=...)/`
+
+  `/a(?=b)/` encontrá la `a` en `ab` pero no en `ac`.
+
+- Negativa `/(?!...)/`
+
+  `/a(?!b)/` encontrá la `a` en `ac` pero no en `ab`.
+
+### Búsqueda hacia atrás
+
+_Este tipo de búsqueda verificará los caracteres a la izquierda del conjunto a buscar._
+
+- Positiva `/(?<=...)/`
+
+  `/(?<=b)a/` encontrá la `a` en `ba` pero no en `ca`.
+
+- Negativa `/(?<!...)/`
+
+  `/(?<!b)a/` encontrá la `a` en `ca` pero no en `ba`.
+
+## Ejemplos
+
+Finalmente, analicemos algunas de las expresiones regulares más comunes para clarificar todo lo visto hasta ahora.
+
+### Validar nombre de usuario
+
+### Validar email
+
+### Validar cantidades de moneda
 
 ## Conclusión
 
-Sé que las expresiones regulares son muy complicadas la primera vez que las conoces (la verdad es que no es una sintaxis muy amigable) pero pueden ayudarte en muchísimas cosas. Te recomiendo que practiques e investigues la teoría de cada componente, después de unos cuantos ejercicios no te prometo que dejen de ser feas pero sí serán más comprensibles 😅.
+Si hasta aquí no has comprendido nada, no te preocupes, es un tema que a todos nos cuesta trabajo entender en un principio (la verdad es que no es una sintaxis muy amigable) pero las expresiones regulares pueden ayudarte en muchísimas cosas.
+
+Te recomiendo que practiques e investigues la teoría de cada componente, después de unos cuantos ejercicios no te prometo que dejen de ser feas pero sí serán más comprensibles 😅.
 
 Happy coding! 🥸
 
