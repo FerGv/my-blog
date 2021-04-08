@@ -384,9 +384,114 @@ Finalmente, analicemos algunas de las expresiones regulares más comunes para cl
 
 ### Validar nombre de usuario
 
+> Acepta letras, números y guiones. Mínimo 3 y máximo 15.
+
+```sh
+/^[a-z0-9_-]{3,15}$/
+```
+
+<table>
+  <tr>
+    <th>Expresión</th>
+    <th>Significado / Uso</th>
+  </tr>
+  <tr>
+    <td><b>/^/</b></td>
+    <td>Indica inicio de línea</td>
+  </tr>
+  <tr>
+    <td><b>/[a-z0-9_-]/</b></td>
+    <td>Letras minúsculas, números, guión bajo y guión medio</td>
+  </tr>
+  <tr>
+    <td><b>/{3,15}/</b></td>
+    <td>Deben encontrarse de 3 a 15 caracteres</td>
+  </tr>
+  <tr>
+    <td><b>/$/</b></td>
+    <td>Indica fin de línea</td>
+  </tr>
+</table>
+
 ### Validar email
 
-### Validar cantidades de moneda
+> Posiblemente de las más raras pero más fáciles.
+
+```sh
+/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/
+```
+
+<table>
+  <tr>
+    <th style="min-width: 120px;">Expresión</th>
+    <th>Significado / Uso</th>
+  </tr>
+  <tr>
+    <td><b>/[^@ \t\r\n]+/</b></td>
+    <td>
+      Cualquier caracter que no sea un arroba, un espacio, una tabulación, un retorno de carro o un salto de línea
+      <br>
+      (Mínimo 1)
+    </td>
+  </tr>
+  <tr>
+    <td><b>/@/</b></td>
+    <td>Signo de arroba</td>
+  </tr>
+  <tr>
+    <td><b>/\./</b></td>
+    <td>Escapa el punto</td>
+  </tr>
+</table>
+
+### Validar contraseña
+
+> Al menos debe contener una mayúscula, una minúscula, un número y un caracter especial. Mínimo 8.
+
+```sh
+/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/
+```
+
+<table>
+  <tr>
+    <th>Expresión</th>
+    <th>Significado / Uso</th>
+  </tr>
+  <tr>
+    <td><b>/^/</b></td>
+    <td>Indica inicio de línea</td>
+  </tr>
+  <tr>
+    <td><b>/(?=.*?[A-Z])/</b></td>
+    <td>Busca al menos una letra mayúscula</td>
+  </tr>
+  <tr>
+    <td><b>/(?=.*?[a-z])/</b></td>
+    <td>Busca al menos una letra minúscula</td>
+  </tr>
+  <tr>
+    <td><b>/(?=.*?[0-9])/</b></td>
+    <td>Busca al menos un número</td>
+  </tr>
+  <tr>
+    <td><b>/(?=.*?[#?!@$ %^&*-])/</b></td>
+    <td>Busca al menos un caracter especial</td>
+  </tr>
+  <tr>
+    <td><b>/.{8,}/</b></td>
+    <td>Cualquier caracter. Mínimo 8</td>
+  </tr>
+  <tr>
+    <td><b>/$/</b></td>
+    <td>Indica fin de línea</td>
+  </tr>
+</table>
+
+::: tip
+Aquí encontramos una combinación especial de comodines: `.*?`
+
+Te dejo [esta pregunta de StackOverflow](https://stackoverflow.com/questions/3075130/what-is-the-difference-between-and-regular-expressions) donde explican a detalle su funcionamiento (lectura en inglés).
+:::
 
 ## Conclusión
 
