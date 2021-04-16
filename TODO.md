@@ -1,0 +1,1 @@
+- Integrate GitHub actions to build docs
