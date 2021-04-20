@@ -15,6 +15,7 @@ const items = [
   '/best-practices/',
   '/jquery/',
   '/regex/',
+  '/fetch/',
 ];
 
 module.exports = items;
