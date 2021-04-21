@@ -180,7 +180,7 @@ Ya no necesitamos convertir el JSON ni indicar las cabeceras, **axios** se encar
 
 - **Evitar escribir la URL base en todas las peticiones**
 
-  Podemos crear un objeto al cual le indicamos la URL base, y después solo escribir el path (la parte después del dominio que representa el recurso que queremos).
+  Podemos crear un objeto al cual le indicamos la URL base, y después solo escribir el path (la parte después del dominio que representa el recurso que queremos). [Documentación](https://axios-http.com/docs/instance/)
 
   ```js
   const cliente = axios.create({
@@ -193,7 +193,7 @@ Ya no necesitamos convertir el JSON ni indicar las cabeceras, **axios** se encar
 
 - **Configuración**
 
-  Podemos pasar un objeto de configuración para cambiar cabeceras, tipo de contenido, etc. Por ejemplo, si lo que recibimos es una imagen en lugar de un JSON, debemos indicar el tipo de contenido de la respuesta.
+  Podemos pasar un objeto de configuración para cambiar cabeceras, tipo de contenido, etc. Por ejemplo, si lo que recibimos es una imagen en lugar de un JSON, debemos indicar el tipo de contenido de la respuesta. [Documentación](https://axios-http.com/docs/req_config/)
 
   ```js
   axios.get('https://images.dog.ceo/breeds/buhund-norwegian/hakon2.jpg', {
@@ -203,7 +203,7 @@ Ya no necesitamos convertir el JSON ni indicar las cabeceras, **axios** se encar
 
 - **Interceptores**
 
-  Finalmente, podemos crear funciones que intercepten y manipulen la petición antes y/o después de realizarla (podemos decir que son [middlewares](https://es.wikipedia.org/wiki/Middleware)). Como viste, normalmente solo nos interesa la data de nuestra respuesta, por lo que podemos crear un interceptor que obtenga esta data y nos la regrese en lugar de todo el objeto de respuesta:
+  Finalmente, podemos crear funciones que intercepten y manipulen la petición antes y/o después de realizarla (podemos decir que son [middlewares](https://es.wikipedia.org/wiki/Middleware)). Como viste, normalmente solo nos interesa la data de nuestra respuesta, por lo que podemos crear un interceptor que obtenga esta data y nos la regrese en lugar de todo el objeto de respuesta: [Documentación](https://axios-http.com/docs/interceptors/)
 
   ```js
   axios.interceptors.response.use(
