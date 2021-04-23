@@ -16,6 +16,7 @@ const items = [
   '/jquery/',
   '/regex/',
   '/fetch/',
+  '/babel/',
 ];
 
 module.exports = items;

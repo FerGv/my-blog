@@ -1,1 +1,2 @@
 - Integrate GitHub actions to build docs
+- Fix copy CNAME cross-platform
