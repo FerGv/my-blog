@@ -90,7 +90,7 @@ Y dentro crearemos un archivo `index.js` con el siguiente contenido:
 console.log('Hola Mundo');
 ```
 
-Para que Babel compile nuestros archivos, necesitaremos crear un archivo `babel.config.json` en la raíz del proyecto y agregar un script en el `package.json`.
+Para que Babel compile nuestros archivos, necesitaremos crear un archivo `babel.config.json` en la raíz del proyecto (fuera de `src`) y agregar un script en el `package.json`.
 
 ```json
 // babel.config.json
@@ -109,5 +109,96 @@ Para que Babel compile nuestros archivos, necesitaremos crear un archivo `babel.
   ...
 }
 ```
+
+En el primer archivo le estamos indicando a Babel que queremos que use un **preset** adicional para que entienda la sintaxis de ES6+. En el `build` le indicamos que `src` es la única carpeta que queremos que compile y que el resultado lo guarde en un directorio `dist`.
+
+Ahora nos movemos a la ruta donde esté el `package.json` para ejecutar el comando para la compilación:
+
+```sh
+# En caso de que estuvieramos en `src`, subimos un directorio.
+$ cd ..
+$ npm run build
+```
+
+Cuando termine la ejecución de este comando, verás que se crea un nuevo directorio `dist` y dentro un archivo `index.js` con este contenido:
+
+```js
+// dist/index.js
+'use strict';
+
+console.log('Hola Mundo');
+```
+
+Hasta aquí no se ve realmente un cambio significativo, solo le agregó una línea al código original 🙃. Pero es porque el `console.log` está más que soportado por todas las plataformas.
+
+::: tip
+Si quieres saber más del modo estricto, hablé sobre él en mi artículo de ["Buenas prácticas"](../best-practices/#modo-estricto).
+:::
+
+Pero agreguemos algo interesante en nuestro `src/index.js` para que veamos el poder de Babel. Crearemos una pequeña app con [Express](https://expressjs.com/es/), así que primero instalemos la librería:
+
+```sh
+# Se agregará como dependencia de producción.
+$ npm i express
+```
+
+Y copia este código en tu index. Sin entrar en tanto detalle, se levanta un pequeño servidor que escuchará las peticiones en el puerto 3000, y cuando entres a `http://localhost:3000` te responderá con un "Hola Mundo".
+
+```js
+// src/index.js
+import express from 'express';
+
+const main = async () => {
+  const app = express();
+
+  app.get('/', (req, res) => {
+    res.send('Hola Mundo');
+  });
+
+  await app.listen(3000);
+  console.log('Servidor escuchando en http://localhost:3000');
+};
+
+main();
+```
+
+::: danger
+Siempre modifica los archivos de `src`, nunca los de `dist` ya que estos últimos serán sobreescritos en cada compilación.
+:::
+
+Ejecuta `npm run build` para compilar los nuevos archivos. Si ahora revisas el `dist/index.js`, verás un código muy raro y difícil de entender, pero es la versión del código que cualquier plataforma (navegador/Node) puede entender. Para correr el programa, simplemente ejecuta:
+
+```sh
+$ node dist/index.js
+```
+
+::: warning
+Si al correr el programa obtienes el siguiente error, sigue estos pasos para solucionarlo:
+
+**ReferenceError: regeneratorRuntime is not defined**
+
+1. Instala el plugin de Babel [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime).
+
+```sh
+$ npm i -D @babel/plugin-transform-runtime
+```
+
+2. Agrega el plugin en el archivo de configuración de Babel.
+
+```json
+{
+  "presets": ["@babel/env"],
+  "plugins": ["@babel/plugin-transform-runtime"]
+}
+```
+
+3. Vuelve a compilar el proyecto.
+
+```sh
+$ npm run build
+```
+
+Después de esto ya no deberías tener ningún problema 😉.
+:::
 
 ## Aliases
