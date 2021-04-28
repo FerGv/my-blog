@@ -32,11 +32,11 @@ Te dejo unos links que espero despejen tus dudas:
 1. Crea una carpeta para el proyecto y entra en ella.
 
 ```sh
-$ mkdir babel-project
-$ cd babel-project
+$ mkdir babel-prueba
+$ cd babel-prueba
 ```
 
-> Si te quieres ver pro, puedes ejecutar `mkdir babel-project && cd $_`. Solo funciona en UNIX.
+> Si te quieres ver pro, puedes ejecutar `mkdir babel-prueba && cd $_`. Solo funciona en UNIX.
 
 ::: tip
 Puedes abrir este proyecto en tu editor de código preferido. En lo personal, yo uso [Visual Studio Code](https://code.visualstudio.com/).
@@ -201,4 +201,85 @@ $ npm run build
 Después de esto ya no deberías tener ningún problema 😉.
 :::
 
-## Aliases
+## Aliases (Bonus)
+
+Hasta aquí ya puedes trabajar sin ningún problema en tu proyecto con JS moderno, pero te daré un tip que lo tomé de los proyectos de Vue y es el uso de **aliases**. En realidad, es una configuración de [Webpack](https://webpack.js.org/) que viene por defecto cuando creas un proyecto con la [Vue CLI](https://cli.vuejs.org/) pero en este caso lo haremos con Babel.
+
+1. Primero debemos instalar un plugin de Babel llamado [babel-plugin-module-resolver](https://www.npmjs.com/package/babel-plugin-module-resolver) (como dependencia de desarrollo):
+
+```sh
+$ npm i -D babel-plugin-module-resolver
+```
+
+2. Modificamos el `babel.config.json` para agregar la configuración del plugin:
+
+```json
+// babel.config.json
+{
+  "plugins": [
+    // otros plugins
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@": "./src/"
+        }
+      }
+    ]
+  ]
+}
+```
+
+3. Si estás en [VSCode](https://code.visualstudio.com/), agrega un archivo `jsconfig.json` en la raíz del proyecto.
+
+```json
+// jsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+```
+
+Supongamos que tienes la siguiente estructura en tu proyecto:
+
+```
+babel-prueba
+|- babel.config.json
+|- jsconfig.json
+|- package.json
+|- src/
+   |- index.js
+   |- modelos/
+      |- carro-compras/
+         |- Item.js
+   |- servicios/
+      |- carro-compras/
+         |- item.js
+```
+
+Ahora dentro de `servicios/item.js` puedes importar el modelo `Item` de esta forma:
+
+```js
+import Item from '@/modelos/carro-compras/Item';
+```
+
+Y evitar el uso de las rutas relativas usando los puntos `../../`:
+
+```js
+import Item from '../../modelos/carro-compras/Item';
+```
+
+Con esta configuración ahora podrás importar desde cualquier archivo de una manera más fácil y obtener ayudas del [intellisense de VSCode](https://code.visualstudio.com/docs/editor/intellisense). También evitas tener que modificar tus importaciones si mueves tu archivo a un lugar diferente dentro de la estructura de tu proyecto.
+
+## Conclusión
+
+Espero te haya gustado esta útil herramienta del entorno de Javascript, te recomiendo que comiences a usarla para que siempre puedas aplicar las nuevas características del lenguaje sin tener que preocuparte por si el código será soportado por navegadores viejos o versiones antiguas de Node.
+
+Happy coding! 🥸
+
+<Disqus />
