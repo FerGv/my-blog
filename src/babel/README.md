@@ -278,7 +278,7 @@ Con esta configuración ahora podrás importar desde cualquier archivo de una ma
 
 ## Conclusión
 
-Espero te haya gustado esta útil herramienta del entorno de Javascript, te recomiendo que comiences a usarla para que siempre puedas aplicar las nuevas características del lenguaje sin tener que preocuparte por si el código será soportado por navegadores viejos o versiones antiguas de Node.
+Espero te haya gustado esta útil herramienta del ecosistema de Javascript, te recomiendo que comiences a usarla para que siempre puedas aplicar las nuevas características del lenguaje sin tener que preocuparte por si el código será soportado por navegadores viejos o versiones antiguas de Node.
 
 Happy coding! 🥸
 
