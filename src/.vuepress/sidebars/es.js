@@ -17,6 +17,7 @@ const items = [
   '/regex/',
   '/fetch/',
   '/babel/',
+  '/asynchronous-foreach/',
 ];
 
 module.exports = items;
