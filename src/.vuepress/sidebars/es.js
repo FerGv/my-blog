@@ -4,10 +4,10 @@ const items = [
   {
     title: 'Javascript',
     path: '/js/',
+    collapsable: false,
     children: [
       {
         title: 'Conceptos',
-        path: '/js/concepts/',
         collapsable: false,
         children: [
           '/js/var-let-const/',
@@ -25,7 +25,6 @@ const items = [
       },
       {
         title: 'Tips',
-        path: '/js/tips/',
         collapsable: false,
         children: [
           '/js/environment-variables/',
@@ -36,7 +35,6 @@ const items = [
       },
       {
         title: 'Librerías',
-        path: '/js/libraries/',
         collapsable: false,
         children: ['/js/jquery/', '/js/babel/'],
       },
