@@ -1,6 +1,6 @@
 # forEach asíncrono
 
-Un problema común cuando usamos métodos de arreglos como [forEach](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) o [map](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) es querer ejecutar código asíncrono dentro de ellos, ya que no obtendrás el resultado que esperas. Pero hoy te mostraré algunas maneras de salir victorioso en estas situaciones.
+Un problema común cuando usamos métodos de arreglos como [forEach](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) o [map](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) es querer ejecutar código asíncrono dentro de ellos, ya que no obtendrás el resultado que esperas. Pero hoy te mostraré algunas maneras de salir victorioso en estas situaciones 😁.
 
 ::: tip
 En este tutorial estaremos trabajando con características de ES6, así que te recomiendo echarle un ojito a los siguientes artículos:
@@ -35,7 +35,7 @@ console.log(resultados);
 // -> []
 ```
 
-Al ver la consola te encontrarías con un arreglo vacío y con un gran sentimiento de confusión dentro de ti. Pero, ¿por qué no funcionó el `forEach`? Bueno, en realidad no es que no funcionara, más bien no le dimos el suficiente tiempo para que nos mostrara los resultados.
+Al ver la consola te encontrarías con un arreglo vacío y con un gran sentimiento de confusión dentro de ti 🥺. Pero, ¿por qué no funcionó el `forEach`? Bueno, en realidad no es que no funcionara, más bien no le dimos el suficiente tiempo para que nos mostrara los resultados.
 
 Si cambiamos nuestro log de esto:
 
@@ -50,7 +50,7 @@ setTimeout(() => console.log(resultados), 0);
 // -> [3, 7, 11]
 ```
 
-Ahora sí veremos el resultado esperado. En pocas palabras podemos decir que JS deja de lado todas las llamadas asíncronas para ejecutarlas una vez haya terminado de correr todo el código asíncrono. Esto ayuda a que no se bloquee la ejecución principal y pueda procesar varias cosas "al mismo tiempo".
+Ahora sí veremos el resultado esperado. En pocas palabras podemos decir que JS deja de lado todas las llamadas asíncronas para ejecutarlas una vez haya terminado de correr todo el código síncrono. Esto ayuda a que no se bloquee la ejecución principal y pueda procesar varias cosas "al mismo tiempo".
 
 ::: tip
 A este funcionamiento se le conoce como **Event Loop** y tiene mucho trasfondo para explicarlo en este artículo, pero si te interesa conocer más, puedes leer las siguientes entradas:

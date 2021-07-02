@@ -4,7 +4,6 @@ const items = [
   {
     title: 'Javascript',
     path: '/js/',
-    collapsable: false,
     children: [
       {
         title: 'Conceptos',
@@ -21,6 +20,7 @@ const items = [
           // '/js/es6-features-part-3/',
           '/js/regex/',
           '/js/fetch/',
+          '/js/recursion/',
         ],
       },
       {
