@@ -21,6 +21,7 @@ const items = [
           '/js/regex/',
           '/js/fetch/',
           '/js/recursion/',
+          '/js/dom/',
         ],
       },
       {
