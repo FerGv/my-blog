@@ -22,6 +22,7 @@ const items = [
           '/js/fetch/',
           '/js/recursion/',
           '/js/dom/',
+          '/js/local-storage/',
         ],
       },
       {
