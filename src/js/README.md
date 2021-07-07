@@ -16,7 +16,6 @@ Te enlisto aquí los artículos pero también puedes encontrarlos en el menú. E
   - [Expresiones regulares (Regex)](./regex/)
   - [Fetch (Consumiendo APIs)](./fetch/)
   - [Recursion](./recursion/)
-  - [Recursion](./recursion/)
   - [DOM (Manipulando HTML con JS)](./dom/)
 
 - **Tips**

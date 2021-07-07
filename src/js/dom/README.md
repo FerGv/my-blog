@@ -2,9 +2,10 @@
 
 El [DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction) es una [API](https://developer.mozilla.org/es/docs/Glossary/API) del navegador que nos permite manipular nuestro documento HTML a través del mapeo de todos sus datos. Por mapear me refiero a armar una [estructura de árbol jerárquico](<https://es.wikipedia.org/wiki/%C3%81rbol_(inform%C3%A1tica)>) en donde cada elemento HTML se representa como un nodo.
 
-> El **DOM** también nos permite manipular XML 🤯.
+![DOM](./dom.png)
+![Blow mind](./blow-mind.gif)
 
-<!-- TODO: create DOM image -->
+> El **DOM** también nos permite manipular XML 🤯.
 
 ## Obtener elementos
 
@@ -48,6 +49,16 @@ document.querySelector('div');
 // y dentro un elemento con la clase "link"
 document.querySelector('#contenedor > div .link');
 ```
+
+<!-- TODO add explanation about using querySelector on an element -->
+No solo podemos usar `querySelector` en el objeto `document`, si ya previamente obtuvimos un elemento, podemos usarlo como nuestro nodo raíz (el nodo a partir del cual comienza la estructura de árbol) y buscar en él.
+
+```js
+const contenedor = document.querySelector('#contenedor');
+const imagenContenedor = contenedor.querySelector('img');
+```
+
+Como puedes ver, la primera llamada de `querySelector` se realiza sobre `document` pero la segunda ya no. En este sentido, la búsqueda de la imagen no se hace en todo el documento, solo en los elementos hijos del nodo `#contenedor`.
 
 ### [querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
 
@@ -132,23 +143,33 @@ Lo más difícil manipulando nodos es la creación, no es la gran cosa pero tene
 
 #### [document.createElement()](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
 
+La manera tradicional de agregar elementos es crear una instancia del elemento y manualmente establecer cada uno de sus atributos para finalmente agregarlo en cualquier nodo de nuestro DOM.
+
 ```js
-const link = document.createElement('a');
-link.className = 'link';
-link.id = 'mi-link';
-link.textContent = 'Este es un link';
-document.appendChild(link);
+const link = document.createElement('a'); // Crea la instancia del elemento
+link.className = 'link'; // Se agrega una clase
+link.id = 'mi-link'; // Se agrega un id
+link.textContent = 'Este es un link'; // Se agrega el contenido del elemento
+document.body.appendChild(link); // El elemento se agrega como nodo hijo de `body`
 ```
+
+::: tip
+`createElement` siempre se llama desde `document` pero `appendChild` puede ser usado en cualquier elemento del DOM.
+:::
 
 #### [{element}.insertAdjacentHTML()](https://developer.mozilla.org/es/docs/Web/API/Element/insertAdjacentHTML)
 
+Por otro lado, la manera moderna de hacer esto es usando `insertAdjacentHTML` el cual nos permite escribir el HTML del elemento(s) que queremos agregar y nos permite indicar fácilmente si debe agregarse al inicio o al final del elemento padre.
+
+El ejemplo anterior podría ser escrito en una sola línea:
+
 ```js
-document.insertAdjacentHTML('beforeend', '<a id="mi-link" class="link">Este es un link</a>');
+document.body.insertAdjacentHTML('beforeend', '<a id="mi-link" class="link">Este es un link</a>');
 ```
 
 ## Conclusión
 
-Espero te ayuden estas alternativas para trabajar código asíncrono y arreglos. Sé que el código de la segunda solución es más complejo pero te recomiendo optar por esa opción siempre que puedas. Verás que tus programas serán mucho más rápidos y eficientes. Créeme que tus usuarios lo agradecerán.
+Trabajar con el DOM es algo con lo que te enfrentas día a día como desarrollador web, por ello es muy importante que entiendas cómo funciona y perfecciones tu habilidad para manipularlo.
 
 Happy coding! 🥸
 
