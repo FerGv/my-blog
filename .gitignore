@@ -2,7 +2,9 @@
 node_modules
 
 # Editor
-.vscode
+.vscode/*
+!.vscode/*.code-snippets
+!.vscode/extensions.json
 
 # Mac
 .DS_STORE

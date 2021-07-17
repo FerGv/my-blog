@@ -1,0 +1,11 @@
+{
+  "Centered Image": {
+    "prefix": "img",
+    "body": [
+      "<p style=\"text-align: center\">",
+      "  <img src=\"$1\" alt=\"$2\" $3/>",
+      "</p>"
+    ],
+    "description": "Centered Image"
+  }
+}
