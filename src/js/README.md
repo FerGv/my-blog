@@ -1,5 +1,9 @@
 # Javascript
 
+<p style="text-align: center">
+  <img src="./logo.png" alt="JS logo" style="max-height: 200px" />
+</p>
+
 En esta sección encontrarás artículos acerca de conceptos básicos de Javascript como tipos de declaración de variables, promesas, async/await, tips y cualquier otro tema que pueda compartir con base en mi experiencia como desarrollador web.
 
 Te enlisto aquí los artículos pero también puedes encontrarlos en el menú. Espero te sean de ayuda.

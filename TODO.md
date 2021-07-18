@@ -1,2 +1,7 @@
 - Integrate GitHub actions to build docs
 - Fix copy CNAME cross-platform
+- Create component for images
+  - Fixed size
+  - Centered
+  - Move images to public folder
+- Add gifs/funny images

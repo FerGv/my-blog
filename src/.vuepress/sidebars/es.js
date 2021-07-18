@@ -42,6 +42,11 @@ const items = [
       },
     ],
   },
+  {
+    title: 'Visual Studio Code',
+    path: '/vscode/',
+    children: ['/vscode/extensions/'],
+  },
 ];
 
 module.exports = items;
