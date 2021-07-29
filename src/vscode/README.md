@@ -18,7 +18,7 @@ Este editor fue creado por Microsoft en 2015 y en los últimos años se ha conve
 
 Entre las principales características que VSCode nos ofrece están:
 - **Intellisense** (autocompletado de código)
-- **Debug** (ejecutar código en modo de depuración de errores)
+- **Debugging** (ejecutar código en modo de depuración de errores)
 - **Git/GitHub** (integra una interfaz para manipular Git fácilmente y conectarse a GitHub)
 - **Extensiones** (posibilidad de extender la funcionalidad estándar a través de [plugins](https://es.wikipedia.org/wiki/Complemento_(inform%C3%A1tica)))
 - **Terminal integrada** (no tienes que salir de tu editor para usar la terminal)
