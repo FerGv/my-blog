@@ -1,8 +1,8 @@
 # Extensiones (Parte 1)
 
-Las extensiones son una parte muy importante de un editor, ya que nos permiten extender la funcionalidad del mismo. Existen de todo tipo: para lenguajes de programación en específico, autocompletado, indentación, formatear código, agregar atajos de teclado, snippets predeterminados, etc.
+Las extensiones son una parte muy importante de un editor, ya que nos permiten extender la funcionalidad del mismo. Existen de todo tipo: para lenguajes de programación en específico, autocompletado, indentación, formatear código, agregar atajos de teclado, snippets personalizados, etc.
 
-Hoy te mostraré las principales que uso, están enfocadas principalmente para desarrollo web con JS.
+Hoy te mostraré las principales que utilizo, las cuales están enfocadas principalmente al desarrollo web con JS.
 
 <p style="text-align: center">
   <img src="./start.gif" alt="Start" />
@@ -12,7 +12,7 @@ Hoy te mostraré las principales que uso, están enfocadas principalmente para d
 
 ### [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
 
-DotENV nos ayuda a aplicar color a nuestro archivos `.env`. De esta manera es más fácil identificar cuál es la clave y cuál el valor.
+DotENV nos ayuda a resaltar la sintaxis de nuestros archivos `.env`. De esta manera es más fácil identificar cuál es la clave y cuál el valor.
 
 <p style="text-align: center">
   <img src="./dotenv.png" alt="DotENV" />
@@ -40,11 +40,27 @@ Para conocer más, visita la página oficial de [EditorConfig](https://editorcon
   <img src="./editorconfig.png" alt="EditorConfig" />
 </p>
 
-### Error Lens
+### [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
 
-### ESLint
+Identificar errores en el código mientras se escribe siempre ayuda a reducir el tiempo de depuración. Dependiendo de cómo tengas configurado algún [linter](https://es.wikipedia.org/wiki/Lint), esta extensión será capaz de mostrar a nivel de línea el error o advertencia que se haya detectado.
 
-### Indent Rainbow
+<p style="text-align: center">
+  <img src="./error-lens.png" alt="Error Lens" />
+</p>
+
+### [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+Usar un [linter](https://es.wikipedia.org/wiki/Lint) de código es muy importante para detectar y corregir errores. El más famoso para Javascript es [ESLint](https://eslint.org/) y la extensión del mismo nombre nos permite integrarlo a VSCode. Te recomiendo leer más acerca de esta extraordinaria herramienta en su [página oficial](https://eslint.org/).
+
+### [Indent Rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+
+La indentación (sangría, tabulación) del código es un factor que afecta directamente a la legibilidad del mismo pero en algunos lenguajes de programación como Python, es más que una buena práctica, es requisito para que funcione correctamente.
+
+Por ello, con esta extensión podrás identificar fácilmente cada nivel de indentación.
+
+<p style="text-align: center">
+  <img src="./indent-rainbow.png" alt="Indent Rainbow" />
+</p>
 
 ### Live Server
 
