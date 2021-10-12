@@ -28,7 +28,7 @@ Muchas veces copiamos y pegamos el contenido de un archivo en otro. Para facilit
 
 ### [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-Esta extensión nos ayuda a establecer ciertos parámetros que el editor debe seguir cada que formatee un código como el tamaño de indentación, el uso de espacios, etc.
+Esta extensión nos ayuda a establecer ciertos parámetros que el editor debe seguir cada que formatee un código, por ejemplo, el tamaño de indentación, el uso de espacios, etc. Todas estas configuraciones se establecen en un archivo `.editorconfig`.
 
 ::: tip
 Es una buena práctica establecer un archivo `.editorconfig` en tus proyectos para estandarizar las guías de estilo en un equipo de trabajo.
@@ -62,17 +62,83 @@ Por ello, con esta extensión podrás identificar fácilmente cada nivel de inde
   <img src="./indent-rainbow.png" alt="Indent Rainbow" />
 </p>
 
-### Live Server
+### [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
-### Open In Browser
+Cuando estás desarrollando un sitio web, una de las cosas que más tediosas pueden llegar a ser es el recargar la página para que tus cambios se vean reflejados. Puede parecer algo simple y hasta absurdo pero creéme que agradecerás el no tener que hacerlo nunca más 😁.
 
-### Prettier
+Instala la extensión, da click derecho sobre tu archivo y elige "Abrir con Live server", guarda tus cambios y disfruta 😀.
 
-### Rainbow Brackets
+<p style="text-align: center">
+  <img src="./live-server.gif" alt="Live Server" />
+</p>
 
-### Sublime Text Keymap
+### [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-### Todo Tree
+Dentro de las buenas prácticas se encuentra el escribir código legible y bien formateado, pero es tan común olvidar un punto y coma que mejor hay que dejar que alguien lo haga por nosotros. Para cumplir esta función tenemos **Prettier**, un formateador de código. Deja que él se encargue del trabajo sucio como la indentación, puntos y comas, comillas, etc. y mejor enfócate en hacer algo increíble 😎.
+
+**Antes**
+<p style="text-align: center">
+  <img src="./prettier-before.png" alt="Prettier before" />
+</p>
+
+**Después**
+<p style="text-align: center">
+  <img src="./prettier-after.png" alt="Prettier after" />
+</p>
+
+### [Rainbow Brackets](https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets)
+
+Cuando el código comienza a hacerse complejo, es difícil distinguir donde empieza o termina una función, una clase, un objeto, un arreglo, etc. Así que una pequeña ayuda es ponerle color a cada par de llaves, paréntesis o corchetes.
+
+<p style="text-align: center">
+  <img src="./rainbow-brackets.png" alt="Rainbow brackets" />
+</p>
+
+<p style="text-align: center">
+  <img src="./doctor-strange.png" alt="Doctor strange" />
+</p>
+
+### [Bracket Padder](https://marketplace.visualstudio.com/items?itemName=viablelab.bracket-padder)
+
+Esta extensión es un gusto personal (tal vez un TOC 😂) porque no me gusta abrir un par de llaves y continuar escribiendo todo pegado, y si eres un psicópata como yo, esta extensión te quitará mucho estrés, ya que al momento de escribir un par de llaves y presionar la barra espaciadora, automáticamente se agregarán los espacios necesarios para que lo que escribas no quede todo junto.
+
+<p style="text-align: center">
+  <img src="./bracket-padder.gif" alt="Bracket padder" />
+</p>
+
+### [Sublime Text Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.sublime-keybindings)
+
+Mis inicios en la programación fueron con [Sublime Text](https://www.sublimetext.com/) y me encantaba porque era muy personalizable y gracias a sus atajos de teclado escribías código muy rápido.
+
+Al final dejé Sublime 🥲 pero no sus atajos 🤭. Entre todos ellos podemos encontrar el duplicar una línea, seleccionar todas las coincidencias, agregar/remover comentarios, entre muchos otros.
+
+Si eres fan de Sublime estoy seguro que amarás esta extensión, si no, también te recomiendo que le eches un ojito 👁, tal vez pueda convencerte.
+
+### [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+
+Finalmente, aunque siempre quisiéramos entregar el mejor código, siguiendo las mejore prácticas, con todas las funcionalidades posibles, la verdad es que cuando tienes que cumplir tiempos de entrega, la mayoría de las veces dejarás cosas pendientes o mal hechas. Pero esto no quiere decir que se deben quedar así, puedes dejar un pequeño comentario que te lo recuerde como este:
+
+<p style="text-align: center">
+  <img src="./todo-tree-code.png" alt="TODO tree code" />
+</p>
+
+Pero conforme crece tu proyecto, va a ser muy difícil que recuerdes dónde dejaste esos comentarios. Es por ello que esta extensión organiza todos ellos y te los ofrece de una manera muy clara y fácil.
+
+<p style="text-align: center">
+  <img src="./todo-tree-list.png" alt="TODO tree list" />
+</p>
+
+Y puedes combinar esta extensión con [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight) para agregarle color a las palabras clave y sea todavía más claro de leer en el código.
+
+<p style="text-align: center">
+  <img src="./todo-highlight.png" alt="TODO highlight" />
+</p>
+
+Solo realiza la siguiente configuración y listo:
+
+<p style="text-align: center">
+  <img src="./todo-tree-settings.png" alt="TODO tree list" />
+</p>
 
 ## Archivo de extensiones recomendadas
 
@@ -93,9 +159,9 @@ Para crearlo, necesitas primero crear una carpeta llamada `.vscode` (el punto es
     "dbaeumer.vscode-eslint",
     "oderwat.indent-rainbow",
     "ritwickdey.liveserver",
-    "techer.open-in-browser",
     "esbenp.prettier-vscode",
     "2gua.rainbow-brackets",
+    "viablelab.bracket-padder",
     "ms-vscode.sublime-keybindings",
     "gruntfuggly.todo-tree"
   ],
