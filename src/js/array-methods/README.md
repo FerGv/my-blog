@@ -4,7 +4,9 @@ A partir de la versión de ECMAScript 2015 (ES6), se incorporaron al lenguaje al
 
 Así que manos a la obra.
 
-![Mr Incredible](./mr-incredible.jpg)
+<p style="text-align: center">
+  <img src="./mr-incredible.jpg" alt="Mr Incredible" />
+</p>
 
 ::: tip
 La mayoría de los métodos que veremos usan [callbacks](https://developer.mozilla.org/es/docs/Glossary/Callback_function), así que procura darle una checada antes de seguir.

@@ -2,13 +2,17 @@
 
 En los tiempos oscuros de Javascript, el asíncronismo era la pesadilla de muchos desarrolladores debido a lo que se conocía como el **Callback Hell (Infierno de Callbacks)**.
 
-![Scared](./scared.gif)
+<p style="text-align: center">
+  <img src="./scared.gif" alt="Scared" />
+</p>
 
 > Muchos todavía no pueden dormir tranquilos 🤯.
 
 Pero ¿cómo lucía?, ¿qué era?, ¿qué lo hacía tan espantoso?. Bueno, una imagen dice más que mil palabras:
 
-![Callback Hell](./callback-hell.png)
+<p style="text-align: center">
+  <img src="./callback-hell.png" alt="Callback Hell" />
+</p>
 
 ::: tip
 De hecho, es tan famoso que descubrí que tiene una [página](http://callbackhell.com/) 😯.

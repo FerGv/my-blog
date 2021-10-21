@@ -4,7 +4,9 @@ En todo sistema se usa información o claves que no cualquiera debería tener ac
 
 Así que veamos cómo usarlas correctamente.
 
-![Come](./come.gif)
+<p style="text-align: center">
+  <img src="./come.gif" alt="Come" />
+</p>
 
 Las **variables de entorno** son variables que **se crean a nivel de sistema operativo**, por eso son tan seguras (no soy experto en ciberseguridad pero al menos es mucho mejor que ["harcodearlas"](https://es.wikipedia.org/wiki/Hard_code)).
 

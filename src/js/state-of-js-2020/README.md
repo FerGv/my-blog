@@ -7,10 +7,14 @@ En esta encuesta podemos encontrar muchas categorias como Frontend Frameworks, B
 Estas dos tecnologías fueron las ganadoras en porcentaje de satisfacción en su ramo (Sabores de JS y Frontend Frameworks, respectivamente), siendo Svelte la gran sorpresa porque se posicionó por encima de React.
 
 **Sabores de JS**
-![Sabores de JS](./flavours.png)
+<p style="text-align: center">
+  <img src="./flavours.png" alt="Sabores de JS" />
+</p>
 
 **Frontend Frameworks**
-![Frontend Frameworks](./frontend.png)
+<p style="text-align: center">
+  <img src="./frontend.png" alt="Frontend Frameworks" />
+</p>
 
 ## Typescript
 
@@ -38,7 +42,9 @@ Te recomiendo que te des una vuelta por su [página oficial](https://www.typescr
 
 Svelte es el chico nuevo del barrio, el más reciente de los frameworks frontend (y si, otro más que hay que aprender 🙄).
 
-![Furious](./furious.gif)
+<p style="text-align: center">
+  <img src="./furious.gif" alt="Furious" />
+</p>
 
 Y antes de que salgas corriendo, déjame decirte que la verdad Svelte llega con una propuesta bastante interesante. De las 4 principales opciones (Angular, React, Vue, Svelte), este último es el que parece apegarse más al JS vainilla de toda la vida. Te muestro un pequeño ejemplo:
 

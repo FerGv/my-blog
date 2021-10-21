@@ -2,7 +2,9 @@
 
 Las **buenas prácticas** hacen referencia a las guías o estándares que se recomiendan seguir para **escribir código de calidad** (legible, fácil de entender, etc). Por calidad no se refiere a que funcione mejor o más rápido (no necesariamente), porque hasta el código más feo y con malas prácticas puede funcionar y hacer lo que debe hacer, pero ese no es el chiste de ser programador 😎.
 
-![Polite](./polite.jpg)
+<p style="text-align: center">
+  <img src="./polite.jpg" alt="Polite" />
+</p>
 
 ::: tip
 Varias cosas de las que veremos hoy y muchas más las puedes encontrar en este repositorio de GitHub llamado ["Clean code Javascript"](https://github.com/ryanmcdermott/clean-code-javascript).

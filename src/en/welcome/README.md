@@ -12,6 +12,8 @@ See you on the next article. Happy coding! 🥸
 If you were wondering, this site is built with [VuePress](https://vuepress.vuejs.org/), a Vue-powered Static Site Generator.
 :::
 
-![Hello](./hello.gif)
+<p style="text-align: center">
+  <img src="./hello.gif" alt="Hello" />
+</p>
 
 <Disqus />

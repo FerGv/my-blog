@@ -13,7 +13,9 @@ console.log(nombresCopia);
 // -> ['Fernando', 'Miriam', 'Andrea']
 ```
 
-![Surprised](./surprised.gif)
+<p style="text-align: center">
+  <img src="./surprised.gif" alt="Surprised" />
+</p>
 
 Sin que nadie lo esperara, el arreglo original también se modificó 😯. El problema está en que cualquier valor que no sea [primitivo](https://developer.mozilla.org/es/docs/Glossary/Primitive) (string, number, boolean) en realidad no se copia su valor, sino su referencia.
 

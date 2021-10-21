@@ -2,7 +2,9 @@
 
 Recientemente en mi trabajo estaba desarrollando un proyecto, en el cual tenía que conectarme a una carpeta compartida en un Windows Server para obtener unos archivos que se enviarían como adjuntos en un correo. Para esta conexión, utilicé [smb2](https://www.npmjs.com/package/smb2) pero esta librería trabaja con callbacks y en lo personal no me gusta esta forma (ya hablé acerca de esto en mi artículo ["Infierno de Callbacks (Promesas y async/await)"](../callback-hell/)).
 
-![Programming](./programming.gif)
+<p style="text-align: center">
+  <img src="./programming.gif" alt="Programming" />
+</p>
 
 Así que traté de utilizar [es6-promisify](https://www.npmjs.com/package/es6-promisify) para convertir los callbacks en promesas. Siguiendo la documentación de las dos librerías llegué a este código:
 

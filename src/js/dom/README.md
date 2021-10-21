@@ -2,8 +2,13 @@
 
 El [DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction) es una [API](https://developer.mozilla.org/es/docs/Glossary/API) del navegador que nos permite manipular nuestro documento HTML a través del mapeo de todos sus datos. Por mapear me refiero a armar una [estructura de árbol jerárquico](<https://es.wikipedia.org/wiki/%C3%81rbol_(inform%C3%A1tica)>) en donde cada elemento HTML se representa como un nodo.
 
-![DOM](./dom.png)
-![Blow mind](./blow-mind.gif)
+<p style="text-align: center">
+  <img src="./dom.png" alt="DOM" />
+</p>
+
+<p style="text-align: center">
+  <img src="./blow-mind.gif" alt="Blow mind" />
+</p>
 
 > El **DOM** también nos permite manipular XML 🤯.
 
@@ -108,7 +113,9 @@ console.log(parrafo.style);
 ::: tip
 De hecho, puedes consultar la lista de opciones para cada nodo escribiendo en la consola de tu navegador el selector y un punto:
 
-![Options](./node-options.png)
+<p style="text-align: center">
+  <img src="./node-options.png" alt="Options" />
+</p>
 
 Verás que las posibilidades son bastantes 😅.
 :::

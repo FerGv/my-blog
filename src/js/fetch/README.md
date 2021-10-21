@@ -4,6 +4,10 @@ Un caso muy común en los sistemas web es obtener recursos de algún sitio exter
 
 Hoy veremos cómo funciona y también una pequeña alternativa en caso de ser necesaria.
 
+<p style="text-align: center">
+  <img src="./programmer.gif" alt="Programmer" />
+</p>
+
 ::: tip
 Para este artículo usaremos [Dog API](https://dog.ceo/dog-api/). Esta API nos provee imágenes bonitas de perritos 🐶.
 :::

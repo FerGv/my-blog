@@ -2,6 +2,10 @@
 
 Hoy en día, el desarrollo web se ha vuelto tan complicado que lo que antes solo se hacía del lado del [backend](https://es.wikipedia.org/wiki/Front_end_y_back_end)**(donde se procesa la lógica, lo que no ve el usuario)**, ahora se reparte en el [frontend](https://es.wikipedia.org/wiki/Front_end_y_back_end)**(lado visual que interactúa con el usuario)** y en algunos casos hasta se delega completamente a este lado.
 
+<p style="text-align: center">
+  <img src="./cry.gif" alt="Cry" />
+</p>
+
 Un ejemplo de esto es la autenticación, que antes se manejaba en el servidor a través de sesiones las cuales utilizaban [cookies](<https://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)>) para almacenar pequeña información en el navegador acerca del usuario. Esto funcionaba bien cuando todo era una [arquitectura monolítica](https://es.wikipedia.org/wiki/Aplicaci%C3%B3n_monol%C3%ADtica) y la lógica y la presentación eran manejados en conjunto. Pero cuando comenzamos a separarlos, tuvimos que buscar nuevas maneras de **almacenar** más información del lado del [cliente](https://es.wikipedia.org/wiki/Cliente-servidor).
 
 Fue así que se creó una [API](https://es.wikipedia.org/wiki/Web_API) del navegador llamada [localStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage) para almacenar todo lo que una aplicación frontend necesitara. Pero debo aclarar que tiene sus consideraciones:

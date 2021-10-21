@@ -2,7 +2,9 @@
 
 Javascript es capaz de evaluar variables como si fueran booleanos en contextos donde son requeridos.
 
-![What gif](./what.gif)
+<p style="text-align: center">
+  <img src="./what.gif" alt="What" />
+</p>
 
 Lo siento, esa descripción es muy técnica 😅. Comencemos con un ejemplo para entender mejor:
 

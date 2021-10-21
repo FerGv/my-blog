@@ -12,6 +12,8 @@ Nos vemos en el siguiente artículo. Happy coding! 🥸
 Por si tienes curiosidad, este sitio está hecho con [VuePress](https://vuepress.vuejs.org/), un generador de sitios estáticos con Vue.
 :::
 
-![Hello](./hello.gif)
+<p style="text-align: center">
+  <img src="./hello.gif" alt="Hello" />
+</p>
 
 <Disqus />

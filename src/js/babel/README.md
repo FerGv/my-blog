@@ -2,9 +2,15 @@
 
 [Babel](https://babeljs.io/) es una herramienta de Javascript que nos permite transpilar el código de versiones modernas del lenguaje a código que cualquier plataforma (navegador/[Node](https://nodejs.org/es/)) pueda entender. Te muestro un ejemplo sacado de la documentación oficial:
 
-![Babel example](./babel-example.png)
+<p style="text-align: center">
+  <img src="./babel-example.png" alt="Babel example" />
+</p>
 
 > De lado izquierdo es el código de ECMAScript2020 usando el [nullish coalescing operator ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) y de lado derecho el código transpilado por Babel.
+
+<p style="text-align: center">
+  <img src="./wtf.gif" alt="WTF" />
+</p>
 
 Aunque el código generado no es tan legible para humanos, la verdad es que no interesa porque ese código es para el intérprete, no para nosotros. Babel nos da la oportunidad de escribir código legible y él se encargará de generar el código que sea necesario para que corra donde sea.
 

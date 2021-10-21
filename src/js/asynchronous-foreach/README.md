@@ -2,6 +2,10 @@
 
 Un problema común cuando usamos métodos de arreglos como [forEach](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) o [map](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) es querer ejecutar código asíncrono dentro de ellos, ya que no obtendrás el resultado que esperas. Pero hoy te mostraré algunas maneras de salir victorioso en estas situaciones 😁.
 
+<p style="text-align: center">
+  <img src="./victory.gif" alt="Victory" />
+</p>
+
 ::: tip
 En este tutorial estaremos trabajando con características de ES6, así que te recomiendo echarle un ojito a los siguientes artículos:
 

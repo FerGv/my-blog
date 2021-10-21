@@ -14,7 +14,9 @@ Lo importante de cada herramienta es qué tanto la puedas personalizar para saca
 
 Este editor fue creado por Microsoft en 2015 y en los últimos años se ha convertido en el editor más usado por la comunidad de desarrollo web, según los datos de la encuesta anual ["State of JS 2020"](https://2020.stateofjs.com/es-ES/other-tools/).
 
-![State of JS](./state-of-js.png)
+<p style="text-align: center">
+  <img src="./state-of-js.png" alt="State of JS" />
+</p>
 
 Entre las principales características que VSCode nos ofrece están:
 - **Intellisense** (autocompletado de código)

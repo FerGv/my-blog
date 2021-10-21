@@ -2,7 +2,9 @@
 
 Con la versión de ECMAScript 2015 (ES6) y todas las que siguieron, Javascript dio un giro total e incorporó muchas nuevas características que mejoraron y arreglaron el lenguaje. Hoy trataré de mostrarte algunas de las más relevantes pero te recomiendo revisar este [repositorio](https://github.com/tc39/proposals) para estar al tanto de las novedades en JS.
 
-![Iron Man](./iron-man.gif)
+<p style="text-align: center">
+  <img src="./iron-man.gif" alt="Iron Man" />
+</p>
 
 > Imagina que ES6+ es a JS como la armadura es a Tony Stark 😎.
 

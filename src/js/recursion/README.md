@@ -2,6 +2,10 @@
 
 El otro día en el trabajo estaba desarrollando una aplicación web en la cual necesitaba conectarme a una carpeta compartida en nuestros servidores para obtener las pruebas de entrega de nuestros proveedores de paquetería que se enviarían al cliente. El problema era que los archivos se organizaban en carpetas por mes y dentro de otras carpetas por proveedor de paquetería, y en algunos casos por día 😬.
 
+<p style="text-align: center">
+  <img src="./sheldon.gif" alt="Sheldon" />
+</p>
+
 ```
 pruebas-de-entrega
 |-- enero

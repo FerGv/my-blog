@@ -6,7 +6,9 @@ En los tiempos oscuros de Javascript, cuando era el chico feo de los lenguajes d
 var miVariable = 'hola';
 ```
 
-![Patrick](./patrick.jpg)
+<p style="text-align: center">
+  <img src="./patrick.jpg" alt="Patrick" />
+</p>
 
 Por la naturaleza de JS, no es necesario declarar el tipo de variable, ya que es [dinámicamente tipado](https://developer.mozilla.org/es/docs/Glossary/Dynamic_typing), es decir, el intérprete reconoce el tipo al momento de la ejecución. Es por esto que nunca verás declaraciones al estilo Java o C:
 

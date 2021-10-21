@@ -2,7 +2,7 @@
 
 Las extensiones son una parte muy importante de un editor, ya que nos permiten extender la funcionalidad del mismo. Existen de todo tipo: para lenguajes de programación en específico, autocompletado, indentación, formatear código, agregar atajos de teclado, snippets personalizados, etc.
 
-Hoy te mostraré las principales que utilizo, las cuales están enfocadas principalmente al desarrollo web con JS.
+Hoy te mostraré las principales que utilizo, las cuales están enfocadas al desarrollo web con JS.
 
 <p style="text-align: center">
   <img src="./start.gif" alt="Start" />
@@ -173,7 +173,9 @@ Es un objeto con dos propiedades que son arreglos: **recommendations** y **unwan
 
 La estructura de cada extension es `<autor>.<extension>` y lo puedes encontrar fácilmente en la página de información de cada extensión, justo a lado del nombre.
 
-![Extension example](./extension-example.png)
+<p style="text-align: center">
+  <img src="./extension-example.png" alt="Extension example" />
+</p>
 
 ## Conclusión
 

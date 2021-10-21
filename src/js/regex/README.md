@@ -8,7 +8,9 @@ En la vida de todo programador llega el momento de utilizar algo conocido como [
 
 Y te dicen que esa cosa rara es la expresión regular para validar un email 🤯.
 
-![Scared](./scared.gif)
+<p style="text-align: center">
+  <img src="./scared.gif" alt="Scared" />
+</p>
 
 ::: tip
 Te recomiendo visitar este sitio llamado [iHateRegex](https://ihateregex.io/) para conocer más acerca de expresiones regulares. Tiene una gran variedad de ellas y explica cada una de sus partes.

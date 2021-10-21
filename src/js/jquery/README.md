@@ -2,13 +2,21 @@
 
 Hoy hablaremos del rey de las librerías de Javascript, el amado y odiado [jQuery](https://jquery.com/) 👑. Estoy seguro que ya habrás escuchado de él, ya que a pesar de que en los últimos años ha caído su uso, aún en pleno 2021 sigue siendo una de las librerías más usadas.
 
+<p style="text-align: center">
+  <img src="./king.png" alt="King" />
+</p>
+
 De hecho, según la encuesta ["State of JS 2020"](https://2020.stateofjs.com), jQuery está en el top 10 de librerías más usadas.
 
-![Libraries](./libraries.png)
+<p style="text-align: center">
+  <img src="./libraries.png" alt="Libraries" />
+</p>
 
 Y revisando la tendencia en [npm trends](https://www.npmtrends.com/jquery) me sorprendió que es positiva 🤯.
 
-![NPM Trends](./npm-trends.png)
+<p style="text-align: center">
+  <img src="./npm-trends.png" alt="NPM Trends" />
+</p>
 
 Así que veamos algunos conceptos básicos que te pueden servir si algún día requieres usar esta librería.
 
