@@ -23,6 +23,7 @@ const items = [
           '/js/recursion/',
           '/js/dom/',
           '/js/local-storage/',
+          '/js/oop/',
         ],
       },
       {

@@ -1,5 +1,6 @@
 {
   "Centered Image": {
+    "scope": "markdown",
     "prefix": "img",
     "body": [
       "<p style=\"text-align: center\">",
@@ -7,5 +8,5 @@
       "</p>"
     ],
     "description": "Centered Image"
-  }
+  },
 }
