@@ -10,14 +10,15 @@ Con la versión de ECMAScript 2015 (ES6) y todas las que siguieron, Javascript d
 
 Este artículo se dividirá para no hacerlo muy largo y para poder actualizarlo fácilmente conforme vaya evolucionando el estándar.
 
-<!-- TODO: complete links -->
-<!-- Aquí tienes los enlaces:
+Aquí tienes los enlaces:
 
 - Parte 1 **(aquí estás)**
-  - Funciones flecha, Interpolación, Desestructuración, Operador spread, Parámetros rest, Parámetros por defecto
+  > Funciones flecha, Interpolación, Desestructuración, Operador spread, Parámetros rest, Parámetros por defecto
 - [Parte 2](../es6-features-part-2/)
-  - Promesas, Async/await, Encadenamiento opcional, Operador nullish, Módulos, Comas finales (trailing commas)
-- [Parte 3](../es6-features-part-3/) -->
+  > Promesas, Async/await, Encadenamiento opcional, Operador nullish, Módulos, Comas finales (trailing commas)
+<!-- TODO: complete links -->
+<!-- - [Parte 3](../es6-features-part-3/) -->
+<!-- - [Parte 4](../es6-features-part-4/) -->
 
 ## [Funciones flecha](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 

@@ -9,4 +9,37 @@
     ],
     "description": "Centered Image"
   },
+
+  "VuePress Danger": {
+    "scope": "markdown",
+    "prefix": "danger",
+    "body": [
+      "::: danger",
+      "$1",
+      ":::"
+    ],
+    "description": "VuePress Danger"
+  },
+
+  "VuePress Tip": {
+    "scope": "markdown",
+    "prefix": "tip",
+    "body": [
+      "::: tip",
+      "$1",
+      ":::"
+    ],
+    "description": "VuePress Tip"
+  },
+
+  "VuePress Warning": {
+    "scope": "markdown",
+    "prefix": "warning",
+    "body": [
+      "::: warning",
+      "$1",
+      ":::"
+    ],
+    "description": "VuePress Warning"
+  },
 }

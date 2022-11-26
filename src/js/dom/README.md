@@ -55,7 +55,6 @@ document.querySelector('div');
 document.querySelector('#contenedor > div .link');
 ```
 
-<!-- TODO: add explanation about using querySelector on an element -->
 No solo podemos usar `querySelector` en el objeto `document`, si ya previamente obtuvimos un elemento, podemos usarlo como nuestro nodo raíz (el nodo a partir del cual comienza la estructura de árbol) y buscar en él.
 
 ```js
