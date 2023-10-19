@@ -17,7 +17,7 @@ const items = [
           '/js/array-methods/',
           '/js/es6-features/',
           '/js/es6-features-part-2/',
-          // '/js/es6-features-part-3/',
+          '/js/es6-features-part-3/',
           // '/js/es6-features-part-4/',
           '/js/regex/',
           '/js/fetch/',

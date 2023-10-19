@@ -16,9 +16,10 @@ Aquí tienes los enlaces:
   > Funciones flecha, Interpolación, Desestructuración, Operador spread, Parámetros rest, Parámetros por defecto
 - [Parte 2](../es6-features-part-2/)
   > Promesas, Async/await, Encadenamiento opcional, Operador nullish, Módulos, Comas finales (trailing commas)
-<!-- TODO: complete links -->
-<!-- - [Parte 3](../es6-features-part-3/) -->
-<!-- - [Parte 4](../es6-features-part-4/) -->
+- [Parte 3](../es6-features-part-3/)
+  > Map, Set, Clases, Atributos privados, métodos de objetos, arreglos, strings, promesas.
+  <!-- TODO: complete links -->
+  <!-- - [Parte 4](../es6-features-part-4/) -->
 
 ## [Funciones flecha](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 

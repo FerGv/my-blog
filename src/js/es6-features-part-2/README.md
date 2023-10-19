@@ -6,8 +6,9 @@ Continuemos viendo lo nuevo en Javascript, recuerda que este es el segundo artí
   > Funciones flecha, Interpolación, Desestructuración, Operador spread, Parámetros rest, Parámetros por defecto
 - Parte 2 **(aquí estás)**
   > Promesas, Async/await, Encadenamiento opcional, Operador nullish, Módulos, Comas finales (trailing commas)
+- [Parte 3](../es6-features-part-3/)
+  > Map, Set, Clases, Atributos privados, métodos de objetos, arreglos, strings, promesas.
   <!-- TODO: complete links -->
-  <!-- - [Parte 3](../es6-features-part-3/) -->
   <!-- - [Parte 4](../es6-features-part-4/) -->
 
 Así que comencemos:

@@ -18,7 +18,7 @@ Te enlisto aquí los artículos pero también puedes encontrarlos en el menú. E
   - [Métodos de arreglos](./array-methods/)
   - [ES6+ características (Parte 1)](./es6-features/)
   - [ES6+ características (Parte 2)](./es6-features-part-2/)
-  <!-- - [ES6+ características (Parte 3)](./es6-features-part-3/) -->
+  - [ES6+ características (Parte 3)](./es6-features-part-3/)
   <!-- - [ES6+ características (Parte 4)](./es6-features-part-4/) -->
   - [Expresiones regulares (Regex)](./regex/)
   - [Fetch (Consumiendo APIs)](./fetch/)
