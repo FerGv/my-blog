@@ -11,10 +11,9 @@
     "dbaeumer.vscode-eslint",
     "oderwat.indent-rainbow",
     "esbenp.prettier-vscode",
-    "2gua.rainbow-brackets",
     "ms-vscode.sublime-keybindings",
     "gruntfuggly.todo-tree",
-    "octref.vetur",
+    "octref.vetur"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []

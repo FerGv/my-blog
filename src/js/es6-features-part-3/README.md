@@ -106,22 +106,63 @@ for (const [llave, valor] of miMapa.entries()) {
 
 ## [Set](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
-El objeto `Set` es parecido a un arreglo pero sin la posibilidad de repetir items, además de que nos permite realizar operaciones especiales con otros objetos `Set`.
+El objeto `Set` nos permite crear una lista de elementos pero sin duplicados.
 
 ```js
 const miSet = new Set(); // (1)
 miSet.add(1); // (2)
 miSet.add(2);
-miSet.add(2);
+miSet.add(2); // Como el elemento ya existe, no se agrega nuevamente
+
 console.log(miSet);
 // -> {1, 2}
+
 console.log(miSet.has(1)); // (3)
 // -> true
+
+console.log(miSet.size); // (4)
+// -> 2
+
+miSet.delete(1); // (5)
+console.log(miSet);
+// -> {2}
+
+miSet.clear(); // (6)
+console.log(miSet);
+// -> {}
 ```
 
 1. Creamos un objeto con la sintasix de contructor `new Set()`.
 2. Agregamos elementos con el método `add(item)`. Internamente el _set_ validará si ya fue guardado el item para no repetirlo.
 3. Con el método `has(item)` podemos validar si existe un item en el _set_.
+4. Con la propiedad `size` podemos conocer la cantidad de elementos.
+5. Para borrar un elemento, usamos el método `delete()`.
+6. Para borrar todos los elementos, usamos el método `clear()`.
+
+Podemos recorrer los elementos dentro de un `Set` directamente con un `for..of`:
+
+```js
+const miSet = new Set();
+miSet.add(1);
+miSet.add(2);
+
+// Recorrer todos los items
+for (const item of miSet) {
+  console.log(item);
+}
+```
+
+Desafortunadamente el objeto `Set` no tiene una forma de acceder a un elemento por índice, pero usando la [desestructuración](../es6-features/#desestructuracion) podemos simular esta funcionalidad:
+
+```js
+const miSet = new Set();
+miSet.add('a');
+miSet.add('b');
+
+const segundoElemento = [...miSet][1];
+console.log(segundoElemento);
+// -> b
+```
 
 ## [Clases](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/class)
 
