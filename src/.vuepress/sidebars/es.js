@@ -25,6 +25,7 @@ const items = [
           '/js/dom/',
           '/js/local-storage/',
           '/js/oop/',
+          '/js/oop-part-2/',
         ],
       },
       {

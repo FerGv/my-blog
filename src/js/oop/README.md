@@ -33,10 +33,12 @@ Lo más importante cuando hablamos de POO (Programación Orientada a Objetos) so
 Trabajaremos con el ejemplo de una persona porque es fácil de comprender pero las clases no se limitan a personas, cualquier entidad (persona, animal, cosa) con características y funcionalidades definidas puede convertirse en una clase.
 
 Una clase se compone de **atributos** y **métodos**.
+
 - **Atributos**: Características propias de los objetos (¿qué posee o tiene?).
 - **Métodos**: Funcionalidades propias de los objetos (¿qué puede hacer?).
 
 En nuestro caso, una persona tiene:
+
 - **Atributos**: nombre, apellido, color de ojos, comida favorita.
 - **Métodos**: saluda, come, camina.
 
@@ -86,6 +88,7 @@ saludar() {
   console.log(`Hola, me llamo ${this.nombre} ${this.apellido}`);
 }
 ```
+
 :::
 
 Para crear un objeto de nuestra clase **Persona** usamos la palabra reservada **new** y agregamos paréntesis como si estuviéramos ejecutando una función.
@@ -94,10 +97,13 @@ Para crear un objeto de nuestra clase **Persona** usamos la palabra reservada **
 const persona = new Persona();
 persona.saludar();
 // -> Hola, me llamo Fernando García
+
 persona.comer();
 // -> Estoy comiendo una pizza
+
 persona.correr();
 // -> Estoy corriendo
+
 console.log(persona.colorOjos);
 // -> café
 ```
@@ -187,5 +193,9 @@ console.log(pedro.nombre);
 Esta fue solo una pequeña introducción a la programación orientada a objetos en Javascript. Todavía hay conceptos como la herencia, getters, setters, encapsulamiento y algunos más por conocer, pero espero que al menos el concepto de clases sea un poco más entendible ahora 🤭.
 
 Te veo pronto. Happy coding! 🥸
+
+::: tip
+Revisa mi artículo [Programación orientada a objetos (Parte 2)](../oop-part-2) para más información.
+:::
 
 <Disqus />

@@ -166,7 +166,158 @@ console.log(segundoElemento);
 
 ## [Clases](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/class)
 
+Javascript no es un lenguaje orientado a objectos tradicional como Java, Python o PHP; ya que internamente trabaja con [prototipos](https://es.wikipedia.org/wiki/Programaci%C3%B3n_basada_en_prototipos). Por esta razón no existían las clases hasta que llegó ES6.
+
+Una clase nos permite modelar el cómo se "ve" y "comporta" un objeto, es decir, describir las propiedades que posee y las acciones que puede realizar. Y por objeto nos referimos a cualquier cosa tangible (persona, perro, carro) o intangible (préstamo, pago, compra).
+
+Revisemos paso a paso la definición de la clase:
+
+```js
+class Persona {
+  nombre = 'Fer';
+  profesion = 'programador';
+
+  saludar() {
+    console.log(`Hola, mi nombre es ${this.nombre} y soy ${this.profesion}.`);
+  }
+}
+
+const fer = new Persona();
+fer.saludar();
+// -> Hola, mi nombre es Fer y soy programador.
+```
+
+Una clase se define con la palabra reservada `class` y el nombre del objeto que se va a modelar en singular con la nomenclatura [UpperCamelCase](https://es.wikipedia.org/wiki/Camel_case).
+
+```js
+class Persona {}
+class Perro {}
+class Pago {}
+class Prestamo {}
+```
+
+Después definimos las propiedades que posee; a las que llamaremos **atributos**. Los atributos simplemente son variables que pertenecen a un determinado objeto, por lo que pueden almacenar cualquier tipo de dato.
+
+```js
+class Persona {
+  nombre = 'Fer';
+  profesion = 'programador';
+  edad = 26;
+  gustos = ['programación', 'futbol', 'series'];
+}
+```
+
+Después definimos las acciones que nuestro objeto puede hacer; a estas las llamaremos **métodos**. Los métodos son funciones que normalmente trabajan con los **atributos**. Para acceder a ellos es necesario utilizar la palabra reservada `this`.
+
+```js
+class Persona {
+  // atributos...
+
+  saludar() {
+    console.log(`Hola, mi nombre es ${this.nombre} y soy ${this.profesion}.`);
+  }
+}
+```
+
+Finalmente, para crear un objeto de nuestra clase utilizamos la palabra reservada `new`. Y para llamar a los **atributos** o **métodos** de nuestro objeto agregamos un `punto (.)` y el nombre de lo que necesitamos.
+
+```js
+// Agregamos paréntesis como si llamáramos a una función.
+const fer = new Persona();
+
+// Agregamos paréntesis porque los métodos son funciones.
+fer.saludar();
+// -> Hola, mi nombre es Fer y soy programador.
+
+// Los atributos no necesitan paréntesis porque solo son variables.
+console.log(fer.nombre);
+// -> Fer
+```
+
+::: tip
+Revisa mi artículo [Programación orientada a objetos](../oop) para más información.
+:::
+
 ## [Atributos privados](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+
+Continuando con las clases, cuando definimos _atributos_ y _métodos_, estos son "públicos" por defecto, es decir, se pueden llamar fuera de la clase, como vimos en el ejemplo anterior:
+
+```js
+const fer = new Persona();
+
+fer.saludar();
+// -> Hola, mi nombre es Fer y soy programador.
+
+console.log(fer.nombre);
+// -> Fer
+```
+
+Pero hay ocasiones en las que este comportamiento no es el ideal y lo que nos gustaría fuera que solo dentro de la clase se pudieran utilizar estos _atributos_ y _métodos_. Esto es conocido como [**encapsulamiento**](<https://es.wikipedia.org/wiki/Encapsulamiento_(inform%C3%A1tica)>) y se refiere a restringir el acceso a los componentes de una clase.
+
+Para esto, ES6 implementó los _atributos y métodos privados_ usando el símbolo de gato o numeral _(#)_ (para los más millenial, "hashtag" 😅) para identificarlos. Veamos un ejemplo:
+
+```js
+class Persona {
+  nombre = 'Fer';
+  #secreto = 'Esto no lo debe saber nadie. Shhh';
+
+  saludar() {
+    console.log('Hola');
+  }
+
+  #contarSecreto() {
+    console.log('shhhh');
+  }
+}
+
+const fer = new Persona();
+console.log(fer.nombre);
+// -> Fer
+
+console.log(fer.secreto);
+// -> undefined
+
+console.log(fer.#secreto);
+// -> Error
+
+fer.saludar();
+// -> Fer
+
+fer.contarSecreto();
+// -> Error
+
+fer.#contarSecreto();
+// -> Error
+```
+
+Ahora ya no se puede acceder desde fuera de la clase a los atributos y métodos que tienen el `#` en su nombre, por lo que decimos que han sido "encapsulados".
+
+Para acceder a ellos, podemos usar un método público o un getter:
+
+```js
+class Persona {
+  #secreto = 'Esto no lo debe saber nadie. Shhh';
+
+  publicarSecreto() {
+    console.log(this.#secreto);
+  }
+
+  get secreto() {
+    return this.#secreto;
+  }
+}
+
+const fer = new Persona();
+fer.publicarSecreto();
+// -> Esto no lo debe saber nadie. Shhh
+
+console.log(fer.secreto);
+// -> Esto no lo debe saber nadie. Shhh
+```
+
+::: tip
+Revisa mi artículo [Programación orientada a objetos (Parte 2)](../oop-part-2) para más información.
+:::
 
 ## Nuevos métodos de objetos
 

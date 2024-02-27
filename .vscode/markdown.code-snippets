@@ -42,4 +42,15 @@
     ],
     "description": "VuePress Warning"
   },
+
+  "VuePress JS Code": {
+    "scope": "markdown",
+    "prefix": "js",
+    "body": [
+      "```js",
+      "$1",
+      "```"
+    ],
+    "description": "VuePress JS Code"
+  },
 }
