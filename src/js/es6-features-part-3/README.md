@@ -321,11 +321,77 @@ Revisa mi artículo [Programación orientada a objetos (Parte 2)](../oop-part-2)
 
 ## Nuevos métodos de objetos
 
+Se agregaron algunos métodos al objeto `Object` con los que podemos trabajar con objetos más fácilmente. Así que veamos diferentes maneras de manipular el siguiente objeto que contiene los números de empleado y sus respectivos nombres.
+
+```js
+const empleados = {
+  123: 'Fer',
+  456: 'Pedro',
+  678: 'Juan',
+};
+```
+
 ### [values()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
+
+Este método nos permite obtener un arreglo con los valores dentro del objeto. Al resultado le podemos aplicar cualquiera de los [métodos de arreglos](../array-methods/).
+
+```js
+console.log(Object.values(empleados));
+// -> ['Fer', 'Pedro', 'Juan']
+
+console.log(Object.values(empleados).find((nombre) => nombre === 'Fer'));
+// -> Fer
+```
 
 ### [entries()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
 
+Este método nos permite obtener un arreglo con las llaves y valores dentro del objeto. El resultado es un arreglo de arreglos o matriz con la siguiente estructura:
+
+`[ [llave1, valor1], [llave2, valor2], ... ]`
+
+```js
+console.log(Object.entries(empleados));
+// -> [ ['123', 'Fer'], ['456', 'Pedro'], ['678', 'Juan'] ]
+
+// Podemos desestructurar el arreglo con la llave y el valor
+// pero ten cuidado con los paréntesis
+//                                ⬇️           ⬇️
+Object.entries(empleados).forEach(([llave, valor]) => {
+  console.log(`Llave: ${llave} - Valor: ${valor}`);
+});
+// -> Llave: 123 - Valor: Fer
+// -> Llave: 456 - Valor: Pedro
+// -> Llave: 678 - Valor: Juan
+```
+
+::: warning
+Recuerda que las llaves de un objeto siempre son **cadenas de texto (strings)**.
+:::
+
 ### [fromEntries()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
+
+El método `fromEntries` es la operación contraria a `entries`, ya que en este caso creamos un objeto a partir de un arreglo de llaves y valores:
+
+`[ [llave1, valor1], [llave2, valor2], ... ]`
+
+```js
+const empleadosArreglo = [ ['123', 'Fer'], ['456', 'Pedro'], ['678', 'Juan'] ];
+const empleadosObjeto = Object.fromEntries(empleadosArreglo);
+console.log(empleadosObjeto);
+// -> { 123: 'Fer', 456: 'Pedro', 678: 'Juan' }
+```
+
+::: tip
+También puedes usar un objeto [Map](#map) en lugar de un arreglo.
+
+```js
+const empleadosMap = new Map([ ['123', 'Fer'], ['456', 'Pedro'], ['678', 'Juan'] ]);
+const empleadosObjeto = Object.fromEntries(empleadosMap);
+console.log(empleadosObjeto);
+// -> { 123: 'Fer', 456: 'Pedro', 678: 'Juan' }
+```
+
+:::
 
 ## Nuevos métodos de arreglos
 
