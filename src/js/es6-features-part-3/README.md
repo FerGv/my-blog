@@ -401,9 +401,47 @@ De estos hablé en detalle en mi artículo [Métodos de arreglos](../array-metho
 
 ### [matchAll()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)
 
-### [replaceAll()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
+`matchAll` nos permite encontrar todas las coincidencias de un patrón o [expresión regular (regex)](../regex/), es decir, buscar texto en un string.
 
-(Lo siento, no encontré la documentación oficial en español 😬)
+El resultado de este método es un objeto `RegExpStringIterator`, al cual le podemos aplicar el [operador spread](../es6-features/#operador-spread) para convertirlo en un arreglo.
+
+```js
+const miRegex = /flor[a-z]*/g;
+const miTexto = 'El florista puso muchas flores en el florero.';
+const coincidencias = [...miTexto.matchAll(miRegex)];
+console.log(coincidencias);
+// -> ['florista', index: 3, input: 'El florista puso muchas flores en el florero.', groups: undefined]
+// -> ['flores', index: 24, input: 'El florista puso muchas flores en el florero.', groups: undefined]
+// -> ['florero', index: 37, input: 'El florista puso muchas flores en el florero.', groups: undefined]
+```
+
+Cada coincidencia se almacena en un arreglo con el texto encontrado, la posición (índice) donde se encontró, el texto en el que se buscó y los grupos encontrados (en caso de ser definidos).
+
+::: warning
+Algo importante para recordar es que la expresión regular siempre debe tener el modificador `/.../g`, lo que quiere decir que es **global**.
+:::
+
+### [replaceAll()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
+
+`replaceAll` nos permite reemplazar todas las coincidencias de un patrón o [expresión regular (regex)](../regex/).
+
+Para buscar podemos usar una cadena de texto o una regex, mientras que el valor de reemplazo siempre es una cadena de texto. El resultado será una nueva cadena de texto con los todos los reemplazos.
+
+```js
+const miTexto = 'Los perros son animales muy bonitos. Los perros son muy buenas mascotas';
+const nuevoTexto = miTexto.replaceAll('perros', 'gatos');
+console.log(nuevoTexto);
+// -> Los gatos son animales muy bonitos. Los gatos son muy buenas mascotas
+
+const miTexto = 'Los perros son animales muy bonitos. Mi perro es muy buena mascota';
+const nuevoTexto = miTexto.replaceAll(/perro/g, 'gato');
+console.log(nuevoTexto);
+// -> Los gatos son animales muy bonitos. Mi gato es muy buena mascota
+```
+
+::: warning
+Algo importante para recordar es que la expresión regular siempre debe tener el modificador `/.../g`, lo que quiere decir que es **global**.
+:::
 
 ## [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 
