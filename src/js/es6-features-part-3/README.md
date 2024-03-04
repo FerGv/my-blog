@@ -445,6 +445,56 @@ Algo importante para recordar es que la expresión regular siempre debe tener el
 
 ## [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 
+`BigInt` es un nuevo tipo de dato para trabajar con números excesivamente grandes o pequeños. Y cuando digo "excesivamente" me refiero a un número mayor a: <code>2<sup>53</sup> - 1</code> (muy muy grande o pequeño 😅).
+
+Aunque este número parece muy aleatorio, en realidad es el límite seguro para trabajar con números en Javascript, ya que pasando ese límite se puede perder la precisión en las operaciones.
+
+```js
+console.log(Number.MAX_SAFE_INTEGER);
+// -> 9007199254740991
+
+console.log(2 ** 53);
+// -> 9007199254740992
+// Supera el límite seguro 😬
+```
+
+Para crear un número `BigInt` tenemos dos opciones:
+
+1. Agregar una `n` al final del número.
+
+```js
+const unNumeroSuperGrande = 1234567890n;
+```
+
+2. Utilizar el objeto `BigInt`.
+
+```js
+const unNumeroSuperGrande = BigInt(1234567890);
+```
+
+Puedes realizar las operaciones tradicionales como suma, resta, multiplicación y división:
+
+```js
+const unNumeroSuperGrande = BigInt(9876543210);
+const otroNumeroSuperGrande = 1234567890n;
+
+console.log(unNumeroSuperGrande + otroNumeroSuperGrande);
+// -> 11111111100n
+
+console.log(unNumeroSuperGrande - otroNumeroSuperGrande);
+// -> 8641975320n
+
+console.log(unNumeroSuperGrande * otroNumeroSuperGrande);
+// -> 12193263111263526900n
+
+console.log(unNumeroSuperGrande / otroNumeroSuperGrande);
+// -> 8n
+```
+
+::: warning
+Se recomienda que todos los operandos sean del tipo `BigInt` para evitar errores en el cálculo.
+:::
+
 ## Métodos de promesas
 
 ### [all()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
