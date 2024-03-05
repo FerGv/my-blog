@@ -606,7 +606,29 @@ const resultado = await Promise.race([ primeraPromesa, segundaPromesa ]);
 
 ## [Separador numérico](https://github.com/tc39/proposal-numeric-separator)
 
+Cuando trabajamos con números muy grandes, estos pueden ser difíciles de leer:
+
+```js
+// ¿Será un millón, billón, trillón? 🤔
+const unNumeroMuyGrande = 1234567890;
+
+// De este mejor ni hablemos 😬
+const otroNumeroMuyGrande = 100000000000000;
+```
+
+Por lo que ahora podemos agrupar los dígitos usando un guión bajo `(_)`:
+
+```js
+// Mil millones 🤓
+const unNumeroMuyGrande = 1_234_567_890;
+
+// Cien billones 🤯
+const otroNumeroMuyGrande = 100_000_000_000_000;
+```
+
 ## Conclusión
+
+Este artículo estuvo un poco largo pero espero que hayas podido entender varios conceptos interesantes del lenguaje. Cada día se agregan nuevas cosas al estándar, por lo que es importante mantenerse siempre actualizado.
 
 Te veo pronto. Happy coding! 🥸
 
