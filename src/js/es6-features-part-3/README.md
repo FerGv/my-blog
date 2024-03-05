@@ -499,19 +499,112 @@ Se recomienda que todos los operandos sean del tipo `BigInt` para evitar errores
 
 ### [all()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
 
+Con `Promise.all()` podemos lanzar varias promesas a la vez y esperar a que **todas ellas resuelvan** o a la **primera que falle**. Para pasar las promesas utilizamos un arreglo como argumento:
+
+```js
+const primeraPromesa = new Promise((resolve) => resolve('Primera promesa'));
+const segundaPromesa = new Promise((resolve) => resolve('Segunda promesa'));
+const resultado = await Promise.all([ primeraPromesa, segundaPromesa ]);
+
+console.log(resultado);
+// -> [ 'Primera promesa', 'Segunda promesa' ]
+```
+
+Como dijimos, si una falla, en ese momento se termina la ejecución y retorna el error. Por lo que no espera a que las demás promesas resuelvan.
+
+```js
+const primeraPromesa = new Promise((resolve, reject) => reject('Primera promesa'));
+const segundaPromesa = new Promise((resolve) => resolve('Segunda promesa'));
+const resultado = await Promise.all([ primeraPromesa, segundaPromesa ]);
+// -> Error
+```
+
+Podemos usar un bloque `try..catch` para cachar el error:
+
+```js
+const primeraPromesa = new Promise((resolve, reject) => reject('Primera promesa'));
+const segundaPromesa = new Promise((resolve) => resolve('Segunda promesa'));
+
+try {
+  const resultado = await Promise.all([ primeraPromesa, segundaPromesa ]);
+  console.log(`Éxito: ${resultado}`)
+} catch(error) {
+  console.log(`Falló: ${error}`);
+}
+
+// -> Falló: Primera promesa
+```
+
+::: tip
+Los resultados siempre conservan el mismo orden que el arreglo de promesas.
+:::
+
 ### [allSettled()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
 
-(Lo siento, no encontré la documentación oficial en español 😬)
+`Promise.allSettled()` es similar a `Promise.all()` pero con la diferencia de que **allSettled** va a esperar la resolución de todas las promesas (exitosas o fallidas), y regresará un arreglo indicando el estatus de cada una junto con su respectivo resultado o error.
+
+```js
+const primeraPromesa = new Promise((resolve, reject) => reject('Primera promesa'));
+const segundaPromesa = new Promise((resolve) => resolve('Segunda promesa'));
+const resultado = await Promise.allSettled([ primeraPromesa, segundaPromesa ]);
+
+console.log(resultado);
+// -> [
+//      { "status": "rejected", "reason": "Primera promesa" },
+//      { "status": "fulfilled", "value": "Segunda promesa" }
+//    ]
+```
+
+- Si la promesa fue **exitosa**, el estatus será **fulfilled** y el resultado estará en la propiedad **value**.
+- Si la promesa fue **fallida**, el estatus será **rejected** y el error estará en la propiedad **reason**.
+
+::: tip
+Los resultados siempre conservan el mismo orden que el arreglo de promesas.
+:::
 
 ### [any()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
 
-(Lo siento, no encontré la documentación oficial en español 😬)
+`Promise.any()` igualmente recibe una arreglo de promesas pero en este caso solo devuelve un único resultado:
+
+- El resultado de la **primera** promesa en resolver exitósamente ó
+- Un error si **todas** las promesas fallan o el arreglo está vacío
+
+```js
+// Simulamos que esta promesa tarda 200ms en resolver
+const primeraPromesa = new Promise(
+  (resolve, reject) => setTimeout(() => reject('Primera promesa'), 200)
+);
+
+// Simulamos que esta promesa tarda 400ms en resolver
+const segundaPromesa = new Promise(
+  (resolve) => setTimeout(() => resolve('Segunda promesa'), 400)
+);
+
+const resultado = await Promise.any([ primeraPromesa, segundaPromesa ]);
+console.log(resultado);
+// -> Segunda promesa
+```
 
 ### [race()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
 
-## [Separador numérico](https://github.com/tc39/proposal-numeric-separator)
+`Promise.race()` a diferencia de `Promise.any()` devolverá el **primer resultado o error** que encuentre.
 
-(Lo siento, no encontré la documentación oficial en español 😬)
+```js
+// Simulamos que esta promesa tarda 200ms en resolver
+const primeraPromesa = new Promise(
+  (resolve, reject) => setTimeout(() => reject('Primera promesa'), 200)
+);
+
+// Simulamos que esta promesa tarda 400ms en resolver
+const segundaPromesa = new Promise(
+  (resolve) => setTimeout(() => resolve('Segunda promesa'), 400)
+);
+
+const resultado = await Promise.race([ primeraPromesa, segundaPromesa ]);
+// -> Error
+```
+
+## [Separador numérico](https://github.com/tc39/proposal-numeric-separator)
 
 ## Conclusión
 
