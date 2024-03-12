@@ -8,10 +8,12 @@ Continuemos viendo lo nuevo en Javascript, recuerda que este es el tercer artíc
   > Promesas, Async/await, Encadenamiento opcional, Operador nullish, Módulos, Comas finales (trailing commas)
 - Parte 3 **(aquí estás)**
   > Map, Set, Clases, Atributos privados, métodos de objetos, arreglos, strings, promesas.
-  <!-- TODO: complete links -->
-  <!-- - [Parte 4](../es6-features-part-4/) -->
+- [Parte 4](../es6-features-part-4/)
+  > Top-level await, toSorted, toReversed, toSpliced
 
-<!-- TODO add gif -->
+<p style="text-align: center">
+  <img src="./bob.gif" alt="Bob" />
+</p>
 
 ## [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 
