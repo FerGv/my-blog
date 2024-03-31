@@ -30,6 +30,10 @@ Normalmente las expresiones regulares se escriben entre dos diagonales `/.../`, 
 Puedes practicar con expresiones regulares en [regex101](https://regex101.com/), tiene una interfaz amigable y permite validar tus expresiones en diferentes lenguajes como Javascript, Python, PHP y Java.
 :::
 
+::: tip
+Puede visualizar sus patrones en [cyrilex](https://extendsclass.com/regex-tester.html), que ofrece una interfaz que muestra gráficamente sus expresiones regulares.
+:::
+
 ### Buscar letras/palabras/frases
 
 Para saber si una cadena de texto incluye la letra `a`, es tan fácil como escribir `/a/`. Así, si quisieras saber si una cadena incluye la palabra `perro`, entonces sería `/perro/`.
