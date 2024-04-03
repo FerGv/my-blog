@@ -46,7 +46,7 @@ Revisa mi artículo [Infierno de Callbacks (Promesas y async/await)](../callback
 
 Pero el mayor inconveniente con **async/await** era que no podíamos usar un **await** fuera de una función **async**. Lo que limitaba los escenarios en que podíamos usarlo.
 
-Por ejemplo, si querías crear un script para automatizar una tarea que consumiera alguna API, era necesario crear una función **async** solo para poder utlizar **await**. En cierto modo, esa función era algo innecesaria:
+Por ejemplo, si querías crear un script para automatizar una tarea que consumiera alguna API, era necesario crear una función **async** solo para poder utilizar **await**. En cierto modo, esa función era algo innecesaria:
 
 ```js
 // main.js
@@ -80,7 +80,7 @@ Una alternativa era usar las [IIFE (funciones auto-ejecutadas)](https://develope
 })();
 ```
 
-Para solucionar este inconveniente, se incorporó el **top-level await** lo que ahora permite las llamadas **await** fuera de funciones **async**. Con esta nueva funcionalidad, nuestro ejemplo queda muy simple:
+Para solucionar este inconveniente, se incorporó el **top-level await**, lo que ahora permite las llamadas **await** fuera de funciones **async**. Con esta nueva funcionalidad, nuestro ejemplo queda muy simple:
 
 ```js
 // main.js
@@ -140,10 +140,84 @@ sort((a, b) => b - a)
 
 ## [toReversed](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)
 
+Con `toReversed()` invertimos el orden de los items de un arreglo. Es igual a [`reverse()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) pero sin mutar el arreglo original.
+
+```js
+// ❌ Con 'reverse'
+const arregloOriginal = [2, 10, 5, 4];
+const arregloInvertido = arregloOriginal.reverse();
+console.log(arregloOriginal);
+// -> [4, 5, 10, 2]
+console.log(arregloInvertido);
+// -> [4, 5, 10, 2]
+
+// ✅ Con 'toReversed'
+const arregloOriginal = [2, 10, 5, 4];
+const arregloInvertido = arregloOriginal.toReversed();
+console.log(arregloOriginal);
+// -> [2, 10, 5, 4]
+console.log(arregloInvertido);
+// -> [4, 5, 10, 2]
+```
+
 ## [toSpliced](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
+
+`toSpliced` es la versión inmutable de [`splice()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/splice). Estos métodos son complejos porque nos permiten eliminar y agregar elementos al mismo tiempo. Un poco confuso a mi parecer 🤯.
+
+La sintásix es la siguiente:
+
+```js
+   splice(indice, contador, nuevoElemento1, ..., nuevoElementoN)
+toSpliced(indice, contador, nuevoElemento1, ..., nuevoElementoN)
+```
+
+1. `indice` indica a partir de qué elemento se realizará la operación.
+2. `contador` indica el número de elementos que se eliminarán.
+3. `nuevoElemento1, ..., nuevoElementoN` son todos los elementos que se agregarán.
+
+Lo más común es utilizar estos métodos solo para eliminar elementos:
+
+```js
+// ❌ Con 'splice'
+const arregloOriginal = [2, 10, 5, 4];
+const elementosEliminados = arregloOriginal.splice(3, 1);
+console.log(arregloOriginal);
+// -> [2, 10, 5]
+console.log(elementosEliminados);
+// -> [4]
+
+// ✅ Con 'toSpliced'
+const arregloOriginal = [2, 10, 5, 4];
+const arregloModificado = arregloOriginal.toSpliced(3, 1);
+console.log(arregloOriginal);
+// -> [2, 10, 5, 4]
+console.log(arregloModificado);
+// -> [2, 10, 5]
+```
+
+Pero también podemos borrar y agregar (simulando una sustitución):
+
+```js
+// ❌ Con 'splice'
+const arregloOriginal = [2, 10, 5, 4];
+const elementosEliminados = arregloOriginal.splice(3, 1, 99);
+console.log(arregloOriginal);
+// -> [2, 10, 5, 99]
+console.log(elementosEliminados);
+// -> [4]
+
+// ✅ Con 'toSpliced'
+const arregloOriginal = [2, 10, 5, 4];
+const arregloModificado = arregloOriginal.toSpliced(3, 1, 99);
+console.log(arregloOriginal);
+// -> [2, 10, 5, 4]
+console.log(arregloModificado);
+// -> [2, 10, 5, 99]
+```
 
 ## Conclusión
 
+Espero hayas aprendido algo nuevo o despejado algunas dudas sobre lo nuevo en el lenguaje.
 Te veo pronto. Happy coding! 🥸
 
 <Disqus />
