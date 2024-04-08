@@ -36,6 +36,7 @@ jobs:
           path: docs
 
   deploy:
+    if: github.ref == 'master'
     needs: build
     runs-on: ubuntu-latest
 
