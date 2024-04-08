@@ -27,7 +27,9 @@ Normalmente las expresiones regulares se escriben entre dos diagonales `/.../`, 
 :::
 
 ::: tip
-Puedes practicar con expresiones regulares en [regex101](https://regex101.com/), tiene una interfaz amigable y permite validar tus expresiones en diferentes lenguajes como Javascript, Python, PHP y Java.
+Puedes practicar con expresiones regulares en [regex101](https://regex101.com/). Tiene una interfaz amigable y permite validar tus expresiones en diferentes lenguajes como Javascript, Python, PHP y Java.
+
+También puedes visualizar gráficamente tus expresiones regulares en [cyrilex](https://extendsclass.com/regex-tester.html). Tiene un genial generador de diagramas para identificar de manera más fácil los patrones.
 :::
 
 ### Buscar letras/palabras/frases
