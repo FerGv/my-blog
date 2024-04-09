@@ -304,11 +304,43 @@ export const App = () => {
 };
 ```
 
+<!-- TODO: Create link to a ready-to-use example -->
+
 ::: tip
 Si quieres probar este ejemplo online, te recomiendo [StackBlitz](https://stackblitz.com/).
 :::
 
 # [findLast](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
+
+Otro caso común cuando trabajamos con arreglos es la necesidad de buscar un elemento pero comenzando desde el final del arreglo, es decir, necesitamos el último elemento que cumpla ciertas condiciones.
+
+Supongamos que tenemos un arreglo de asistencias como el siguiente:
+
+```js
+const asistencias = [
+  { nombre: 'Fer', hora: '09:00' },
+  { nombre: 'Luis', hora: '09:05' },
+  { nombre: 'Luis', hora: '18:00' },
+  { nombre: 'Fer', hora: '20:00' }, // Ese Fer se pasa de trabajador 😂
+];
+```
+
+En este arreglo no tenemos un identificador para saber si la hora fue de entrada o salida, por lo que podríamos asumir que la primera asistencia encontrada sería la entrada y la última sería la salida.
+
+```js
+const ferEntrada = asistencias.find((asistencia) => asistencia.nombre === 'Fer');
+const ferSalida = asistencias.findLast((asistencia) => asistencia.nombre === 'Fer');
+const luisEntrada = asistencias.find((asistencia) => asistencia.nombre === 'Luis');
+const luisSalida = asistencias.findLast((asistencia) => asistencia.nombre === 'Luis');
+
+console.log(`Fer - entrada: ${ferEntrada.hora} / salida: ${ferSalida.hora}`);
+// Fer - entrada: 09:00 / salida: 20:00
+
+console.log(`Luis - entrada: ${luisEntrada.hora} / salida: ${luisSalida.hora}`);
+// Luis - entrada: 09:05 / salida: 18:00
+```
+
+Para resumir, `find()` retorna el primer elemento que cumpla la condición y `findLast()` retorna el último.
 
 # [findLastIndex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
 
