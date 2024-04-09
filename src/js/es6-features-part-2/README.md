@@ -7,9 +7,9 @@ Continuemos viendo lo nuevo en Javascript, recuerda que este es el segundo artí
 - Parte 2 **(aquí estás)**
   > Promesas, Async/await, Encadenamiento opcional, Operador nullish, Módulos, Comas finales (trailing commas)
 - [Parte 3](../es6-features-part-3/)
-  > Map, Set, Clases, Atributos privados, métodos de objetos, arreglos, strings, promesas.
+  > Map, Set, Clases, Atributos privados, métodos de objetos, arreglos, strings, promesas
 - [Parte 4](../es6-features-part-4/)
-  > Top-level await, toSorted, toReversed, toSpliced
+  > Top-level await, toSorted, toReversed, toSpliced, with, findLast, findLastIndex, at
 
 Así que comencemos:
 

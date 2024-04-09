@@ -17,9 +17,9 @@ Aquí tienes los enlaces:
 - [Parte 2](../es6-features-part-2/)
   > Promesas, Async/await, Encadenamiento opcional, Operador nullish, Módulos, Comas finales (trailing commas)
 - [Parte 3](../es6-features-part-3/)
-  > Map, Set, Clases, Atributos privados, métodos de objetos, arreglos, strings, promesas.
+  > Map, Set, Clases, Atributos privados, métodos de objetos, arreglos, strings, promesas
 - [Parte 4](../es6-features-part-4/)
-  > Top-level await, toSorted, toReversed, toSpliced
+  > Top-level await, toSorted, toReversed, toSpliced, with, findLast, findLastIndex, at
 
 ## [Funciones flecha](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 

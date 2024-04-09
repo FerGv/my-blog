@@ -7,9 +7,9 @@ Continuemos viendo lo nuevo en Javascript, recuerda que este es el cuarto artíc
 - [Parte 2](../es6-features-part-2/)
   > Promesas, Async/await, Encadenamiento opcional, Operador nullish, Módulos, Comas finales (trailing commas)
 - [Parte 3](../es6-features-part-3/)
-  > Map, Set, Clases, Atributos privados, métodos de objetos, arreglos, strings, promesas.
+  > Map, Set, Clases, Atributos privados, métodos de objetos, arreglos, strings, promesas
 - Parte 4 **(aquí estás)**
-  > Top-level await, toSorted, toReversed, toSpliced
+  > Top-level await, toSorted, toReversed, toSpliced, with, findLast, findLastIndex, at
 
 <p style="text-align: center">
   <img src="./bugs.gif" alt="Bob" />
@@ -214,6 +214,105 @@ console.log(arregloOriginal);
 console.log(arregloModificado);
 // -> [2, 10, 5, 99]
 ```
+
+# [with](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with)
+
+Hablando de sustituciones, una mejor forma de cambiar un elemento dentro de un arreglo es usando el método `with()`. Este método es similar a la forma tradicional usando los corchetes y los índices `[i]`:
+
+::: warning
+Recuerda que los índices de un arreglo siempre comienzan en cero `0`.
+:::
+
+- **Forma tradicional**
+
+```js
+const arregloOriginal = [2, 10, 5, 4];
+arregloOriginal[0] = 8;
+
+console.log(arregloOriginal);
+// -> [8, 10, 5, 4]
+```
+
+- **Usando _with()_**
+
+```js
+const arregloOriginal = [2, 10, 5, 4];
+const arregloModificado = arregloOriginal.with(0, 8);
+console.log(arregloOriginal);
+// -> [2, 10, 5, 4]
+
+console.log(arregloModificado);
+// -> [8, 10, 5, 4]
+
+// También se pueden usar índices negativos
+// los cuales comienzan a contar del último al primer elemento
+const arregloModificado = arregloOriginal.with(-1, 8);
+console.log(arregloModificado);
+// -> [2, 10, 5, 8]
+```
+
+Otro punto importante es que `with()` **no** modifica el arreglo original, en su lugar retorna un nuevo arreglo con el nuevo valor sustituido en el índice indicado.
+
+Y tal vez te estés preguntando en qué casos se necesitaría crear un nuevo arreglo cambiando un solo valor 🤔. Bueno, este es un caso de uso común en frameworks reactivos como [React](https://es.react.dev/), [Vue](https://vuejs.org/) o [Svelte](https://svelte.dev/). En especial cuando se utilizan manejadores de estado como [Redux](https://redux.js.org/), [Vuex](https://vuex.vuejs.org/) o [Pinia](https://pinia.vuejs.org/).
+
+Veamos un ejemplo con los hooks de React:
+
+```js
+// App.js
+
+import { useState } from 'react';
+
+export const App = () => {
+  const [tareas, setTareas] = useState([]);
+
+  const agregarTarea = (event) => {
+    const nuevaTarea = event.target?.value?.trim();
+
+    if (event.key !== 'Enter' || !nuevaTarea) return;
+
+    // Para no mutar el arreglo original aplicamos la desestructuración
+    // y agregamos el nuevo elemento al final
+    setTareas([...tareas, nuevaTarea]);
+    event.target.value = '';
+  };
+
+  const cambiarTarea = (indice, nuevaTarea) => {
+    // No podemos mutar el arreglo original,
+    // por lo que generamos uno nuevo con la modificación necesaria
+    setTareas(tareas.with(indice, nuevaTarea));
+  };
+
+  return (
+    <div>
+      <ol>
+        {tareas.map((tarea, indice) => (
+          <li>
+            <input
+              value={tarea}
+              onChange={(event) => cambiarTarea(indice, event.target.value)}
+            />
+          </li>
+        ))}
+      </ol>
+
+      <label>
+        Nueva tarea:
+        <input placeholder="Escribe una tarea..." onKeyUp={agregarTarea} />
+      </label>
+    </div>
+  );
+};
+```
+
+::: tip
+Si quieres probar este ejemplo online, te recomiendo [StackBlitz](https://stackblitz.com/).
+:::
+
+# [findLast](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
+
+# [findLastIndex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
+
+# [at](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at)
 
 ## Conclusión
 
